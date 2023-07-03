@@ -235,8 +235,11 @@ def main(url: str,
     )
     
     query = issue_db_api.Query().land(
-        *(
+        issue_db_api.Query().tag('has-label'),
+        issue_db_api.Query().lor(
+            *(
             issue_db_api.Query().tag(tag) for tag in tags 
+            )
         )
     )
     logger.info(f'Searching for issues with tags: {tags}')
