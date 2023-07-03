@@ -1,1 +1,3 @@
 issue-db-api==0.10.*
+numpy 
+sklearn
