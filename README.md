@@ -8,7 +8,7 @@ A Tool to Find and Explore Architectural Design Decisions in Issue Tracking Syst
 
 The components making up Maestro are divided across five separate repositories:
 
-- [User Interface](https://github.com/Shadania/ArchUI)
+- [User Interface](https://github.com/mining-design-decisions/maestro-ArchUI)
 - [Deep Learning Manager](https://github.com/mining-design-decisions/maestro-dl-manager)
 - [Search Engine](https://github.com/mining-design-decisions/maestro-search-engine)
 - [Database Setup & API](https://github.com/mining-design-decisions/maestro-issues-db)
