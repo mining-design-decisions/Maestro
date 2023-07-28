@@ -104,6 +104,16 @@ class AgreementAnalyser:
                     [pair[0].property for pair in common],
                     [pair[1].property for pair in common]
                 )
+            ),
+            AgreementMatrix(
+                title='non-architectural',
+                labels=['No', 'Yes'],
+                row_label=author_a,
+                col_label=author_b,
+                matrix=confusion_matrix(
+                    [pair[0].non_architectural for pair in common],
+                    [pair[1].non_architectural for pair in common]
+                )
             )
         ]
     
@@ -262,6 +272,7 @@ def main(url: str,
             if exclude_authors is not None and comment.author in exclude_authors:
                 continue 
             if include_authors is not None and comment.author not in include_authors:
+                print(f'Excluded:', comment.author)
                 continue
             if (label := maybe_extract_labelling_comment(comment.body)) is not None:
                 analyser.add_entry(issue.identifier, comment.author, label) 
