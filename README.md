@@ -24,3 +24,20 @@ The UI can now be accesed at `http://localhost:5000`.
 
 The client library is meant for the development of external scripts which interact with the database. The client library can be installed using `pip install issue-db-api`.
 
+---
+
+# Architecture 
+
+[Click here](docs/architecture/index.md) 
+
+---
+
+# Roadmap 
+
+Coming soon
+
+--- 
+
+# Contributing 
+
+Coming soon...
