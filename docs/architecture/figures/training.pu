@@ -1,0 +1,46 @@
+@startuml 
+
+actor "User" as User
+participant "Database API" as DBApi 
+participant "Endpoint Handler" as Endpoint
+participant "Training Pipeline" as TrainingPipeline 
+participant "Model Builder" as ModelBuilder
+participant "Feature Generator" as FeatureGenerator
+participant "Data Splitter" as Splitter  
+
+
+activate User 
+User -> Endpoint: train(config_id)
+    activate Endpoint 
+    Endpoint -> DBApi: config = retrieve_config(model_id)
+        activate DBApi
+        deactivate DBApi
+    Endpoint -> Endpoint: run(config)
+        activate Endpoint
+        deactivate Endpoint
+        Endpoint -> ModelBuilder: factory, features = build_model_factory(config)
+            activate ModelBuilder
+            ModelBuilder -> FeatureGenerator: features = get_data(config)
+                activate FeatureGenerator
+                FeatureGenerator -> FeatureGenerator: feature_factory = get_factory(config.feature_generator)
+                FeatureGenerator -> DBApi: data = fetch_data(config.query)
+                    activate DBApi
+                    deactivate DBApi
+                FeatureGenerator -> FeatureGenerator: features = feature_factory.generate_features(data)
+                FeatureGenerator -[hidden]-> FeatureGenerator
+                deactivate FeatureGenerator
+            ModelBuilder -> ModelBuilder: factory = <model builder callback>
+            ModelBuilder -[hidden]-> ModelBuilder
+            deactivate ModelBuilder
+         Endpoint -> TrainingPipeline: invoke(factory, features, config)
+            activate TrainingPipeline
+            TrainingPipeline -> Splitter: training_data, validation_data, testing_data = split(features, config)
+                activate Splitter 
+                Splitter -> Splitter: splitter = get_splitter(config)
+                Splitter -> Splitter: training_data, validation_data, testing_data = splitter.split(features)
+                deactivate Splitter 
+            deactivate TrainingPipeline
+    deactivate Endpoint
+deactivate User 
+
+@enduml 

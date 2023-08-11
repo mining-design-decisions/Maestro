@@ -21,4 +21,8 @@ enough for most practical applications.
 
 ---
 
+## Training Sequence Diagram 
+
+![alt](./figures/training.png)
+
 ## Component Diagram 
