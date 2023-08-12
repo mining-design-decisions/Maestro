@@ -1,4 +1,4 @@
-@startuml "Deep Learning Manager -- Training Sequence Diagram"
+@startuml "training"
 
 actor "User" as User
 participant "Database API" as DBApi 
