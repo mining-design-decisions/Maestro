@@ -23,6 +23,6 @@ enough for most practical applications.
 
 ## Training Sequence Diagram 
 
-![alt](./figures/training.png)
+![alt](./figures/training.svg)
 
 ## Component Diagram 

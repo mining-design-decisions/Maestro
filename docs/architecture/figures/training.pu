@@ -1,4 +1,4 @@
-@startuml 
+@startuml "Deep Learning Manager -- Training Sequence Diagram"
 
 actor "User" as User
 participant "Database API" as DBApi 
@@ -23,24 +23,60 @@ User -> Endpoint: train(config_id)
             ModelBuilder -> FeatureGenerator: features = get_data(config)
                 activate FeatureGenerator
                 FeatureGenerator -> FeatureGenerator: feature_factory = get_factory(config.feature_generator)
+                    activate FeatureGenerator  
+                    deactivate FeatureGenerator
                 FeatureGenerator -> DBApi: data = fetch_data(config.query)
                     activate DBApi
                     deactivate DBApi
                 FeatureGenerator -> FeatureGenerator: features = feature_factory.generate_features(data)
-                FeatureGenerator -[hidden]-> FeatureGenerator
+                    activate FeatureGenerator  
+                    deactivate FeatureGenerator
                 deactivate FeatureGenerator
             ModelBuilder -> ModelBuilder: factory = <model builder callback>
-            ModelBuilder -[hidden]-> ModelBuilder
+                activate ModelBuilder  
+                deactivate ModelBuilder
             deactivate ModelBuilder
          Endpoint -> TrainingPipeline: invoke(factory, features, config)
             activate TrainingPipeline
             TrainingPipeline -> Splitter: training_data, validation_data, testing_data = split(features, config)
                 activate Splitter 
                 Splitter -> Splitter: splitter = get_splitter(config)
+                    activate Splitter
+                    deactivate Splitter
                 Splitter -> Splitter: training_data, validation_data, testing_data = splitter.split(features)
+                    activate Splitter
+                    deactivate Splitter
                 deactivate Splitter 
+            loop foreach (train, validation, test) in zip(training_data, validation_data, testing_data)
+                TrainingPipeline -> ModelBuilder: model = factory()
+                    activate ModelBuilder
+                    ModelBuilder -> ModelBuilder: builder = get_builder(config)
+                        activate ModelBuilder
+                        deactivate ModelBuilder
+                    ModelBuilder -> ModelBuilder: model = builder.build(config)
+                        activate ModelBuilder
+                        deactivate ModelBuilder
+                    deactivate ModelBuilder 
+                TrainingPipeline -> TrainingPipeline: trained_model, training_stats = model.fit(train, validation, config)
+                    activate TrainingPipeline
+                    deactivate TrainingPipeline
+                TrainingPipeline -> TrainingPipeline: testing_stats = model.evaluate(test)
+                    activate TrainingPipeline
+                    deactivate TrainingPipeline
+                TrainingPipeline -> DBApi: identifier = upload_stats(training_stats, testing_stats)
+                    activate DBApi
+                    deactivate DBApi
+                TrainingPipeline -> DBApi: identifier = upload_model(trained_model)
+                    activate DBApi
+                    deactivate DBApi
+                TrainingPipeline -> TrainingPipeline: store identifiers 
+                    activate TrainingPipeline
+                    deactivate TrainingPipeline
+            end loop 
             deactivate TrainingPipeline
+        Endpoint <-- TrainingPipeline: identifiers 
     deactivate Endpoint
+User <-- Endpoint: identifiers
 deactivate User 
 
 @enduml 
