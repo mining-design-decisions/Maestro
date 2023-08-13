@@ -3,15 +3,15 @@
 ---
 
 
-<details>
-<summary>number-of-rnn-layers</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">number-of-rnn-layers</summary>
 
 
 _Number of RNN layers to use_
 
 Argument type: int (minimum: 1, maximum: 10)
 
-This argument has no default value
+Default value: 1
 
 
 
@@ -19,20 +19,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>rnn-layer-1-type</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-1-type</summary>
 
 
 _Type of RNN layer_
 
 Argument type: str
 
-This argument has no default value
+Default value: LSTM
 
 
 
@@ -40,20 +40,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>rnn-layer-2-type</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-2-type</summary>
 
 
 _Type of RNN layer_
 
 Argument type: str
 
-This argument has no default value
+Default value: LSTM
 
 
 
@@ -61,20 +61,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>rnn-layer-3-type</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-3-type</summary>
 
 
 _Type of RNN layer_
 
 Argument type: str
 
-This argument has no default value
+Default value: LSTM
 
 
 
@@ -82,20 +82,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>rnn-layer-4-type</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-4-type</summary>
 
 
 _Type of RNN layer_
 
 Argument type: str
 
-This argument has no default value
+Default value: LSTM
 
 
 
@@ -103,20 +103,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>rnn-layer-5-type</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-5-type</summary>
 
 
 _Type of RNN layer_
 
 Argument type: str
 
-This argument has no default value
+Default value: LSTM
 
 
 
@@ -124,20 +124,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>rnn-layer-6-type</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-6-type</summary>
 
 
 _Type of RNN layer_
 
 Argument type: str
 
-This argument has no default value
+Default value: LSTM
 
 
 
@@ -145,20 +145,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>rnn-layer-7-type</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-7-type</summary>
 
 
 _Type of RNN layer_
 
 Argument type: str
 
-This argument has no default value
+Default value: LSTM
 
 
 
@@ -166,20 +166,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>rnn-layer-8-type</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-8-type</summary>
 
 
 _Type of RNN layer_
 
 Argument type: str
 
-This argument has no default value
+Default value: LSTM
 
 
 
@@ -187,20 +187,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>rnn-layer-9-type</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-9-type</summary>
 
 
 _Type of RNN layer_
 
 Argument type: str
 
-This argument has no default value
+Default value: LSTM
 
 
 
@@ -208,20 +208,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>rnn-layer-10-type</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-10-type</summary>
 
 
 _Type of RNN layer_
 
 Argument type: str
 
-This argument has no default value
+Default value: LSTM
 
 
 
@@ -229,20 +229,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>rnn-layer-1-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-1-size</summary>
 
 
 _Number of units in the i-th rnn layer._
 
 Argument type: int (minimum: 2, maximum: 4096)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -250,20 +250,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>rnn-layer-2-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-2-size</summary>
 
 
 _Number of units in the i-th rnn layer._
 
 Argument type: int (minimum: 2, maximum: 4096)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -271,20 +271,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>rnn-layer-3-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-3-size</summary>
 
 
 _Number of units in the i-th rnn layer._
 
 Argument type: int (minimum: 2, maximum: 4096)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -292,20 +292,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>rnn-layer-4-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-4-size</summary>
 
 
 _Number of units in the i-th rnn layer._
 
 Argument type: int (minimum: 2, maximum: 4096)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -313,20 +313,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>rnn-layer-5-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-5-size</summary>
 
 
 _Number of units in the i-th rnn layer._
 
 Argument type: int (minimum: 2, maximum: 4096)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -334,20 +334,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>rnn-layer-6-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-6-size</summary>
 
 
 _Number of units in the i-th rnn layer._
 
 Argument type: int (minimum: 2, maximum: 4096)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -355,20 +355,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>rnn-layer-7-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-7-size</summary>
 
 
 _Number of units in the i-th rnn layer._
 
 Argument type: int (minimum: 2, maximum: 4096)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -376,20 +376,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>rnn-layer-8-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-8-size</summary>
 
 
 _Number of units in the i-th rnn layer._
 
 Argument type: int (minimum: 2, maximum: 4096)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -397,20 +397,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>rnn-layer-9-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-9-size</summary>
 
 
 _Number of units in the i-th rnn layer._
 
 Argument type: int (minimum: 2, maximum: 4096)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -418,20 +418,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>rnn-layer-10-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-10-size</summary>
 
 
 _Number of units in the i-th rnn layer._
 
 Argument type: int (minimum: 2, maximum: 4096)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -439,20 +439,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>rnn-layer-activation</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-activation</summary>
 
 
 _Activation to use in the rnn layers_
 
 Argument type: str
 
-This argument has no default value
+Default value: tanh
 
 
 
@@ -460,20 +460,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>rnn-layer-recurrent-activation</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-recurrent-activation</summary>
 
 
 _Recurrent activation to use in the rnn layers_
 
 Argument type: str
 
-This argument has no default value
+Default value: sigmoid
 
 
 
@@ -481,20 +481,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>rnn-layer-1-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-1-dropout</summary>
 
 
 _Dropout for the i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -502,20 +502,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-2-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-2-dropout</summary>
 
 
 _Dropout for the i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -523,20 +523,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-3-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-3-dropout</summary>
 
 
 _Dropout for the i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -544,20 +544,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-4-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-4-dropout</summary>
 
 
 _Dropout for the i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -565,20 +565,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-5-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-5-dropout</summary>
 
 
 _Dropout for the i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -586,20 +586,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-6-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-6-dropout</summary>
 
 
 _Dropout for the i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -607,20 +607,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-7-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-7-dropout</summary>
 
 
 _Dropout for the i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -628,20 +628,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-8-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-8-dropout</summary>
 
 
 _Dropout for the i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -649,20 +649,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-9-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-9-dropout</summary>
 
 
 _Dropout for the i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -670,20 +670,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-10-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-10-dropout</summary>
 
 
 _Dropout for the i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -691,20 +691,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-1-recurrent-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-1-recurrent-dropout</summary>
 
 
 _Recurrent dropout for i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -712,20 +712,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-2-recurrent-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-2-recurrent-dropout</summary>
 
 
 _Recurrent dropout for i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -733,20 +733,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-3-recurrent-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-3-recurrent-dropout</summary>
 
 
 _Recurrent dropout for i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -754,20 +754,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-4-recurrent-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-4-recurrent-dropout</summary>
 
 
 _Recurrent dropout for i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -775,20 +775,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-5-recurrent-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-5-recurrent-dropout</summary>
 
 
 _Recurrent dropout for i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -796,20 +796,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-6-recurrent-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-6-recurrent-dropout</summary>
 
 
 _Recurrent dropout for i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -817,20 +817,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-7-recurrent-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-7-recurrent-dropout</summary>
 
 
 _Recurrent dropout for i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -838,20 +838,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-8-recurrent-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-8-recurrent-dropout</summary>
 
 
 _Recurrent dropout for i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -859,20 +859,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-9-recurrent-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-9-recurrent-dropout</summary>
 
 
 _Recurrent dropout for i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -880,20 +880,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-10-recurrent-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-10-recurrent-dropout</summary>
 
 
 _Recurrent dropout for i-th rnn layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -901,20 +901,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>number-of-dense-layers</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">number-of-dense-layers</summary>
 
 
 _Number of dense layers to use_
 
 Argument type: int (minimum: 0, maximum: 10)
 
-This argument has no default value
+Default value: 0
 
 
 
@@ -922,20 +922,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>dense-layer-1-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">dense-layer-1-size</summary>
 
 
 _Number of units in the i-th dense layer._
 
 Argument type: int (minimum: 2, maximum: 16384)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -943,20 +943,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>dense-layer-2-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">dense-layer-2-size</summary>
 
 
 _Number of units in the i-th dense layer._
 
 Argument type: int (minimum: 2, maximum: 16384)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -964,20 +964,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>dense-layer-3-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">dense-layer-3-size</summary>
 
 
 _Number of units in the i-th dense layer._
 
 Argument type: int (minimum: 2, maximum: 16384)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -985,20 +985,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>dense-layer-4-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">dense-layer-4-size</summary>
 
 
 _Number of units in the i-th dense layer._
 
 Argument type: int (minimum: 2, maximum: 16384)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -1006,20 +1006,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>dense-layer-5-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">dense-layer-5-size</summary>
 
 
 _Number of units in the i-th dense layer._
 
 Argument type: int (minimum: 2, maximum: 16384)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -1027,20 +1027,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>dense-layer-6-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">dense-layer-6-size</summary>
 
 
 _Number of units in the i-th dense layer._
 
 Argument type: int (minimum: 2, maximum: 16384)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -1048,20 +1048,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>dense-layer-7-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">dense-layer-7-size</summary>
 
 
 _Number of units in the i-th dense layer._
 
 Argument type: int (minimum: 2, maximum: 16384)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -1069,20 +1069,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>dense-layer-8-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">dense-layer-8-size</summary>
 
 
 _Number of units in the i-th dense layer._
 
 Argument type: int (minimum: 2, maximum: 16384)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -1090,20 +1090,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>dense-layer-9-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">dense-layer-9-size</summary>
 
 
 _Number of units in the i-th dense layer._
 
 Argument type: int (minimum: 2, maximum: 16384)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -1111,20 +1111,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>dense-layer-10-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">dense-layer-10-size</summary>
 
 
 _Number of units in the i-th dense layer._
 
 Argument type: int (minimum: 2, maximum: 16384)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -1132,20 +1132,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>fnn-layer-activation</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-activation</summary>
 
 
 _Activation to use in the hidden FNN layers_
 
 Argument type: str
 
-This argument has no default value
+Default value: linear
 
 
 
@@ -1153,20 +1153,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>fnn-layer-activation-alpha</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-activation-alpha</summary>
 
 
 _Alpha value for the elu activation_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1174,20 +1174,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-1-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-1-dropout</summary>
 
 
 _Dropout for the i-th FNN layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1195,20 +1195,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-2-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-2-dropout</summary>
 
 
 _Dropout for the i-th FNN layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1216,20 +1216,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-3-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-3-dropout</summary>
 
 
 _Dropout for the i-th FNN layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1237,20 +1237,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-4-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-4-dropout</summary>
 
 
 _Dropout for the i-th FNN layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1258,20 +1258,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-5-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-5-dropout</summary>
 
 
 _Dropout for the i-th FNN layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1279,20 +1279,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-6-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-6-dropout</summary>
 
 
 _Dropout for the i-th FNN layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1300,20 +1300,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-7-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-7-dropout</summary>
 
 
 _Dropout for the i-th FNN layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1321,20 +1321,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-8-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-8-dropout</summary>
 
 
 _Dropout for the i-th FNN layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1342,20 +1342,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-9-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-9-dropout</summary>
 
 
 _Dropout for the i-th FNN layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1363,20 +1363,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-10-dropout</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-10-dropout</summary>
 
 
 _Dropout for the i-th FNN layer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1384,20 +1384,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-kernel-l1</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-kernel-l1</summary>
 
 
 _l1 kernel regularizer for the layers_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1405,20 +1405,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-kernel-l2</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-kernel-l2</summary>
 
 
 _l2 kernel regularizer for the layers_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1426,20 +1426,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-bias-l1</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-bias-l1</summary>
 
 
 _l1 bias regularizer for the layers_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1447,20 +1447,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-bias-l2</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-bias-l2</summary>
 
 
 _l2 bias regularizer for the layers_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1468,20 +1468,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-activity-l1</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-activity-l1</summary>
 
 
 _l1 activity regularizer for the layers_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1489,20 +1489,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>fnn-layer-activity-l2</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">fnn-layer-activity-l2</summary>
 
 
 _l2 activity regularizer for the layers_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1510,20 +1510,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-activation-alpha</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-activation-alpha</summary>
 
 
 _Alpha value for the elu activation of the i-th layer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1531,20 +1531,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-recurrent-activation-alpha</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-recurrent-activation-alpha</summary>
 
 
 _Alpha value for the elu activation of the i-th layer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1552,20 +1552,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-kernel-l1</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-kernel-l1</summary>
 
 
 _l1 kernel regularizer for the layers_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1573,20 +1573,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-kernel-l2</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-kernel-l2</summary>
 
 
 _l2 kernel regularizer for the layers_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1594,20 +1594,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-recurrent-l1</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-recurrent-l1</summary>
 
 
 _l1 recurrent regularizer for the layers_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1615,20 +1615,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-recurrent-l2</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-recurrent-l2</summary>
 
 
 _l2 recurrent regularizer for the layers_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1636,20 +1636,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-bias-l1</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-bias-l1</summary>
 
 
 _l1 bias regularizer for the layers_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1657,20 +1657,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-bias-l2</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-bias-l2</summary>
 
 
 _l2 bias regularizer for the layers_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1678,20 +1678,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-activity-l1</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-activity-l1</summary>
 
 
 _l1 activity regularizer for the layers_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1699,20 +1699,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>rnn-layer-activity-l2</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">rnn-layer-activity-l2</summary>
 
 
 _l2 activity regularizer for the layers_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1720,20 +1720,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>optimizer</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">optimizer</summary>
 
 
 _Optimizer to use. Special case: use sgd_XXX to specify SGD with momentum XXX_
 
 Argument type: str
 
-This argument has no default value
+Default value: adam
 
 
 
@@ -1741,13 +1741,13 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>optimizer-params</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">optimizer-params</summary>
 
 
 _Hyper-parameters for the optimizer_
@@ -1762,17 +1762,17 @@ Hyper-parameter specs are inherited from nested child arguments.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>adam</summary>
-
-
+<summary style="margin-left:-2em">adam</summary>
 
 
 
-<details>
 
-<summary>beta-1</summary>
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">beta-1</summary>
 
 
 
@@ -1780,7 +1780,7 @@ _Beta-1 value for the Adam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.9
 
 
 
@@ -1788,7 +1788,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -1796,9 +1796,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>beta-2</summary>
+<summary style="margin-left:-2em">beta-2</summary>
 
 
 
@@ -1806,7 +1806,7 @@ _Beta-2 value for the Adam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.999
 
 
 
@@ -1814,7 +1814,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -1822,9 +1822,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>epsilon</summary>
+<summary style="margin-left:-2em">epsilon</summary>
 
 
 
@@ -1832,7 +1832,7 @@ _Epsilon value for the Adam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 1e-07
 
 
 
@@ -1840,7 +1840,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -1848,9 +1848,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>weight-decay</summary>
+<summary style="margin-left:-2em">weight-decay</summary>
 
 
 
@@ -1858,7 +1858,7 @@ _Weight decay_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1866,7 +1866,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -1878,17 +1878,17 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>nadam</summary>
-
-
+<summary style="margin-left:-2em">nadam</summary>
 
 
 
-<details>
 
-<summary>beta-1</summary>
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">beta-1</summary>
 
 
 
@@ -1896,7 +1896,7 @@ _Beta-1 value for the Nadam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.9
 
 
 
@@ -1904,7 +1904,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -1912,9 +1912,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>beta-2</summary>
+<summary style="margin-left:-2em">beta-2</summary>
 
 
 
@@ -1922,7 +1922,7 @@ _Beta-2 value for the Nadam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.999
 
 
 
@@ -1930,7 +1930,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -1938,9 +1938,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>epsilon</summary>
+<summary style="margin-left:-2em">epsilon</summary>
 
 
 
@@ -1948,7 +1948,7 @@ _Epsilon value for the Nadam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 1e-07
 
 
 
@@ -1956,7 +1956,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -1964,9 +1964,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>weight-decay</summary>
+<summary style="margin-left:-2em">weight-decay</summary>
 
 
 
@@ -1974,7 +1974,7 @@ _Weight decay_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -1982,7 +1982,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -1994,17 +1994,17 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>adamw</summary>
-
-
+<summary style="margin-left:-2em">adamw</summary>
 
 
 
-<details>
 
-<summary>beta-1</summary>
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">beta-1</summary>
 
 
 
@@ -2012,7 +2012,7 @@ _Beta-1 value for the Nadam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.9
 
 
 
@@ -2020,7 +2020,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -2028,9 +2028,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>beta-2</summary>
+<summary style="margin-left:-2em">beta-2</summary>
 
 
 
@@ -2038,7 +2038,7 @@ _Beta-2 value for the Nadam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.999
 
 
 
@@ -2046,7 +2046,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -2054,9 +2054,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>epsilon</summary>
+<summary style="margin-left:-2em">epsilon</summary>
 
 
 
@@ -2064,7 +2064,7 @@ _Epsilon value for the Nadam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 1e-07
 
 
 
@@ -2072,7 +2072,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -2080,9 +2080,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>weight-decay</summary>
+<summary style="margin-left:-2em">weight-decay</summary>
 
 
 
@@ -2090,7 +2090,7 @@ _Weight decay_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -2098,7 +2098,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -2110,17 +2110,17 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>sgd</summary>
-
-
+<summary style="margin-left:-2em">sgd</summary>
 
 
 
-<details>
 
-<summary>momentum</summary>
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">momentum</summary>
 
 
 
@@ -2128,7 +2128,7 @@ _Momentum value for the SGD optimizer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -2136,7 +2136,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -2144,9 +2144,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>use-nesterov</summary>
+<summary style="margin-left:-2em">use-nesterov</summary>
 
 
 
@@ -2154,7 +2154,7 @@ _Whether to use Nesterov momentum in the SGD optimizer_
 
 Argument type: bool
 
-This argument has no default value
+Default value: False
 
 
 
@@ -2162,7 +2162,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
@@ -2175,15 +2175,15 @@ No supported hyperparameter specs.
 </details>
 
 
-<details>
-<summary>loss</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">loss</summary>
 
 
 _Loss to use in the training process_
 
 Argument type: str
 
-This argument has no default value
+Default value: crossentropy
 
 
 
@@ -2191,20 +2191,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>learning-rate-start</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">learning-rate-start</summary>
 
 
 _Initial learning rate for the learning process_
 
 Argument type: float (minimum: 0.0)
 
-This argument has no default value
+Default value: 0.005
 
 
 
@@ -2212,20 +2212,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>learning-rate-stop</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">learning-rate-stop</summary>
 
 
 _Learnign rate after "learning-rate-steps" steps_
 
 Argument type: float (minimum: 0.0)
 
-This argument has no default value
+Default value: 0.0005
 
 
 
@@ -2233,20 +2233,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>learning-rate-steps</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">learning-rate-steps</summary>
 
 
 _Amount of decay steps requierd to go from start to stop LR_
 
 Argument type: int (minimum: 1)
 
-This argument has no default value
+Default value: 470
 
 
 
@@ -2254,20 +2254,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>learning-rate-power</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">learning-rate-power</summary>
 
 
 _Degree of the polynomial to use for the learning rate._
 
 Argument type: float (minimum: 0.0)
 
-This argument has no default value
+Default value: 1.0
 
 
 
@@ -2275,20 +2275,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>batch-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">batch-size</summary>
 
 
 _Batch size used during training_
 
 Argument type: int (minimum: 1)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -2296,20 +2296,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>use-trainable-embedding</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">use-trainable-embedding</summary>
 
 
 _Whether to make the word-embedding trainable._
 
 Argument type: bool
 
-This argument has no default value
+Default value: False
 
 
 
@@ -2317,6 +2317,6 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>

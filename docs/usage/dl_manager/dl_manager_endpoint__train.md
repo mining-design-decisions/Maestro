@@ -8,8 +8,8 @@
 
 ## Arguments
 
-<details>
-<summary>database-url</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">database-url</summary>
 
 
 _URL of the database (wrapper)_
@@ -27,8 +27,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>model-id</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">model-id</summary>
 
 
 _ID of the model being trained. Must be present in the database. (only required for storage)_

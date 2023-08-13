@@ -14,13 +14,13 @@ _Usually, the outward-facing endpoint retrieves a config from the database, and 
 
 ## Arguments
 
-<details>
-<summary>input-mode</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">input-mode</summary>
 
 
 _Generator to use._
 
-Argument type: enum (possible values: `BOWNormalized`, `Word2Vec`, `Bert`, `OntologyFeatures`, `Metadata`, `Doc2Vec`, `TfidfGenerator`, `AutoEncoder`, `KateAutoEncoder`, `BOWFrequency`)
+Argument type: enum (possible values: `Word2Vec`, `BOWNormalized`, `Metadata`, `OntologyFeatures`, `KateAutoEncoder`, `TfidfGenerator`, `AutoEncoder`, `Bert`, `BOWFrequency`, `Doc2Vec`)
 
 Numer of arguments: A list of one or more values.
 
@@ -33,8 +33,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>output-mode</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">output-mode</summary>
 
 
 _Output mode to use._
@@ -52,8 +52,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>params</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">params</summary>
 
 
 _Generator params. Items in the name=value format._
@@ -71,8 +71,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>ontology-classes</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">ontology-classes</summary>
 
 
 _ID of the DB-file containing ontology classes._
@@ -92,8 +92,8 @@ Additional constraints:
 </details>
 
 
-<details>
-<summary>apply-ontology-classes</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">apply-ontology-classes</summary>
 
 
 _Enable application of ontology classes_
@@ -113,13 +113,13 @@ Additional constraints:
 </details>
 
 
-<details>
-<summary>classifier</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">classifier</summary>
 
 
 _Classifier to use. Use `list` for options_
 
-Argument type: enum (possible values: `LinearConv1Model`, `LinearRNNModel`, `Bert`, `FullyConnectedModel`)
+Argument type: enum (possible values: `FullyConnectedModel`, `LinearRNNModel`, `LinearConv1Model`, `Bert`)
 
 Numer of arguments: A list of one or more values.
 
@@ -138,8 +138,8 @@ Additional constraints:
 </details>
 
 
-<details>
-<summary>epochs</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">epochs</summary>
 
 
 _Amount of training epochs_
@@ -157,8 +157,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>split-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">split-size</summary>
 
 
 _Size of testing and validation splits. Ignored when k-cross > 0_
@@ -176,8 +176,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>max-train</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">max-train</summary>
 
 
 _Maximum amount of training items. -1 for infinite_
@@ -195,8 +195,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>k-cross</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">k-cross</summary>
 
 
 _Enable k-fold cross-validation._
@@ -226,8 +226,8 @@ Additional constraints:
 </details>
 
 
-<details>
-<summary>quick-cross</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">quick-cross</summary>
 
 
 _Enable k-fold cross validation_
@@ -249,8 +249,8 @@ Additional constraints:
 </details>
 
 
-<details>
-<summary>cross-project</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">cross-project</summary>
 
 
 _Run cross project validation._
@@ -274,8 +274,8 @@ Additional constraints:
 </details>
 
 
-<details>
-<summary>cache-features</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">cache-features</summary>
 
 
 _Force caching of features. NOTE: the pipeline does not handle cache invalidation!_
@@ -295,8 +295,8 @@ Additional constraints:
 </details>
 
 
-<details>
-<summary>architectural-only</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">architectural-only</summary>
 
 
 _If specified, only architectural issues are used_
@@ -314,8 +314,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>hyper-params</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">hyper-params</summary>
 
 
 _Hyper-parameters params. Items in the name=value format._
@@ -333,8 +333,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>class-balancer</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">class-balancer</summary>
 
 
 _Enable Class-Balancing_
@@ -352,13 +352,13 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>upsampler</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">upsampler</summary>
 
 
 _Upsampler to use_
 
-Argument type: enum (possible values: `RandomUpSampler`, `SmoteUpSampler`, `SynonymUpSampler`)
+Argument type: enum (possible values: `SmoteUpSampler`, `SynonymUpSampler`, `RandomUpSampler`)
 
 Numer of arguments: A single value.
 
@@ -373,8 +373,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>upsampler-params</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">upsampler-params</summary>
 
 
 _Parameters for the upsampler_
@@ -394,8 +394,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>batch-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">batch-size</summary>
 
 
 _Specify the batch size used during training_
@@ -413,8 +413,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>combination-strategy</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">combination-strategy</summary>
 
 
 _Strategy used to combine models. Use `combination-strategies` for more information._
@@ -434,8 +434,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>combination-model-hyper-params</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">combination-model-hyper-params</summary>
 
 
 _Hyper-parameters for the creation of a combined model_
@@ -455,8 +455,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>ensemble-strategy</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">ensemble-strategy</summary>
 
 
 _Strategy used to combine models. Use `combination-strategies` for more information._
@@ -476,13 +476,13 @@ Additional constraints:
 </details>
 
 
-<details>
-<summary>stacking-meta-classifier</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">stacking-meta-classifier</summary>
 
 
 _Classifier to use as meta-classifier in stacking._
 
-Argument type: enum (possible values: `LinearConv1Model`, `LinearRNNModel`, `Bert`, `FullyConnectedModel`)
+Argument type: enum (possible values: `FullyConnectedModel`, `LinearRNNModel`, `LinearConv1Model`, `Bert`)
 
 Numer of arguments: A single value.
 
@@ -497,8 +497,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>stacking-meta-classifier-hyper-parameters</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">stacking-meta-classifier-hyper-parameters</summary>
 
 
 _Hyper-parameters for the meta-classifier_
@@ -518,8 +518,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>stacking-use-concat</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">stacking-use-concat</summary>
 
 
 _Use simple concatenation to create the input for the meta classifier_
@@ -537,8 +537,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>stacking-no-matrix</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">stacking-no-matrix</summary>
 
 
 _Disallow the use of matrices for meta classifier input_
@@ -556,8 +556,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>voting-mode</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">voting-mode</summary>
 
 
 _Mode for the voting ensemble. Either hard of sort voting_
@@ -577,8 +577,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>use-early-stopping</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">use-early-stopping</summary>
 
 
 _If specified, use early stopping._
@@ -596,8 +596,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>early-stopping-patience</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">early-stopping-patience</summary>
 
 
 _Patience used when using early stopping_
@@ -615,8 +615,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>early-stopping-min-delta</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">early-stopping-min-delta</summary>
 
 
 _Minimum delta used when using early stopping. One entry for every attribute used._
@@ -636,8 +636,8 @@ Additional constraints:
 </details>
 
 
-<details>
-<summary>early-stopping-attribute</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">early-stopping-attribute</summary>
 
 
 _Attribute(s) to use for early stopping (from the validation set)_
@@ -657,8 +657,8 @@ Additional constraints:
 </details>
 
 
-<details>
-<summary>test-separately</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">test-separately</summary>
 
 
 _If given, disable combining multiple classifiers. In stead, test them separately on the same data._
@@ -680,8 +680,8 @@ Additional constraints:
 </details>
 
 
-<details>
-<summary>store-model</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">store-model</summary>
 
 
 _If given, store the trained model. Can only be used when training a single model._
@@ -709,8 +709,8 @@ Additional constraints:
 </details>
 
 
-<details>
-<summary>model-id</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">model-id</summary>
 
 
 _ID of the model being trained. Must be present in the database. (passed automatically be `train` endpoint)_
@@ -730,8 +730,8 @@ Additional constraints:
 </details>
 
 
-<details>
-<summary>analyze-keywords</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">analyze-keywords</summary>
 
 
 _Compute a list of important keywords (convolutional mode only)_
@@ -753,8 +753,8 @@ Additional constraints:
 </details>
 
 
-<details>
-<summary>training-data-query</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">training-data-query</summary>
 
 
 _Query to obtain data from the database for training_
@@ -772,8 +772,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>test-data-query</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">test-data-query</summary>
 
 
 _Query to obtain data from the database for performance evaluation_
@@ -793,8 +793,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>database-url</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">database-url</summary>
 
 
 _URL of the database (wrapper)_
@@ -812,8 +812,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>test-with-training-data</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">test-with-training-data</summary>
 
 
 _Draw testing data from training data using train/test split_
@@ -833,8 +833,8 @@ Additional constraints:
 </details>
 
 
-<details>
-<summary>seed</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">seed</summary>
 
 
 _Seed to use to initialize all the RNG related stuff. -1 means no seed is used_
@@ -852,8 +852,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>perform-tuning</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">perform-tuning</summary>
 
 
 _Enable hyperparameter tuning_
@@ -871,8 +871,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>tuner-type</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">tuner-type</summary>
 
 
 _Select the hyperparameter optimization strategy._
@@ -892,8 +892,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>tuner-objective</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">tuner-objective</summary>
 
 
 _Select the metric to optimize for._
@@ -913,8 +913,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>tuner-max-trials</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">tuner-max-trials</summary>
 
 
 _Select the number of hyperparameter combinations that are tried._
@@ -934,8 +934,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>tuner-executions-per-trial</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">tuner-executions-per-trial</summary>
 
 
 _Select the number of executions per trial, to mitigate randomness._
@@ -955,8 +955,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>tuner-hyperband-iterations</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">tuner-hyperband-iterations</summary>
 
 
 _Select the number of iterations for the HyperBand algorithm._
@@ -976,8 +976,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>tuner-hyper-params</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">tuner-hyper-params</summary>
 
 
 _Hyper-parameters params for the Keras Tuner. Items in the name=value format._
@@ -997,8 +997,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>tuner-combination-model-hyper-params</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">tuner-combination-model-hyper-params</summary>
 
 
 _Hyper-parameters for the creation of a combined model for keras tuner_

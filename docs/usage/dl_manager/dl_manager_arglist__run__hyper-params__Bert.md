@@ -3,15 +3,15 @@
 ---
 
 
-<details>
-<summary>number-of-frozen-layers</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">number-of-frozen-layers</summary>
 
 
 _Number of layers to freeze._
 
 Argument type: int (minimum: 0, maximum: 12)
 
-This argument has no default value
+Default value: 10
 
 
 
@@ -19,20 +19,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>optimizer</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">optimizer</summary>
 
 
 _Optimizer to use. Special case: use sgd_XXX to specify SGD with momentum XXX_
 
 Argument type: str
 
-This argument has no default value
+Default value: adam
 
 
 
@@ -40,13 +40,13 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>optimizer-params</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">optimizer-params</summary>
 
 
 _Hyper-parameters for the optimizer_
@@ -61,17 +61,17 @@ Hyper-parameter specs are inherited from nested child arguments.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>adam</summary>
-
-
+<summary style="margin-left:-2em">adam</summary>
 
 
 
-<details>
 
-<summary>beta-1</summary>
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">beta-1</summary>
 
 
 
@@ -79,7 +79,7 @@ _Beta-1 value for the Adam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.9
 
 
 
@@ -87,7 +87,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -95,9 +95,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>beta-2</summary>
+<summary style="margin-left:-2em">beta-2</summary>
 
 
 
@@ -105,7 +105,7 @@ _Beta-2 value for the Adam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.999
 
 
 
@@ -113,7 +113,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -121,9 +121,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>epsilon</summary>
+<summary style="margin-left:-2em">epsilon</summary>
 
 
 
@@ -131,7 +131,7 @@ _Epsilon value for the Adam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 1e-07
 
 
 
@@ -139,7 +139,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -147,9 +147,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>weight-decay</summary>
+<summary style="margin-left:-2em">weight-decay</summary>
 
 
 
@@ -157,7 +157,7 @@ _Weight decay_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -165,7 +165,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -177,17 +177,17 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>nadam</summary>
-
-
+<summary style="margin-left:-2em">nadam</summary>
 
 
 
-<details>
 
-<summary>beta-1</summary>
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">beta-1</summary>
 
 
 
@@ -195,7 +195,7 @@ _Beta-1 value for the Nadam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.9
 
 
 
@@ -203,7 +203,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -211,9 +211,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>beta-2</summary>
+<summary style="margin-left:-2em">beta-2</summary>
 
 
 
@@ -221,7 +221,7 @@ _Beta-2 value for the Nadam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.999
 
 
 
@@ -229,7 +229,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -237,9 +237,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>epsilon</summary>
+<summary style="margin-left:-2em">epsilon</summary>
 
 
 
@@ -247,7 +247,7 @@ _Epsilon value for the Nadam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 1e-07
 
 
 
@@ -255,7 +255,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -263,9 +263,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>weight-decay</summary>
+<summary style="margin-left:-2em">weight-decay</summary>
 
 
 
@@ -273,7 +273,7 @@ _Weight decay_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -281,7 +281,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -293,17 +293,17 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>adamw</summary>
-
-
+<summary style="margin-left:-2em">adamw</summary>
 
 
 
-<details>
 
-<summary>beta-1</summary>
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">beta-1</summary>
 
 
 
@@ -311,7 +311,7 @@ _Beta-1 value for the Nadam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.9
 
 
 
@@ -319,7 +319,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -327,9 +327,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>beta-2</summary>
+<summary style="margin-left:-2em">beta-2</summary>
 
 
 
@@ -337,7 +337,7 @@ _Beta-2 value for the Nadam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.999
 
 
 
@@ -345,7 +345,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -353,9 +353,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>epsilon</summary>
+<summary style="margin-left:-2em">epsilon</summary>
 
 
 
@@ -363,7 +363,7 @@ _Epsilon value for the Nadam optimizer_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 1e-07
 
 
 
@@ -371,7 +371,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -379,9 +379,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>weight-decay</summary>
+<summary style="margin-left:-2em">weight-decay</summary>
 
 
 
@@ -389,7 +389,7 @@ _Weight decay_
 
 Argument type: float (no restrictions)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -397,7 +397,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -409,17 +409,17 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>sgd</summary>
-
-
+<summary style="margin-left:-2em">sgd</summary>
 
 
 
-<details>
 
-<summary>momentum</summary>
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">momentum</summary>
 
 
 
@@ -427,7 +427,7 @@ _Momentum value for the SGD optimizer_
 
 Argument type: float (minimum: 0.0, maximum: 1.0)
 
-This argument has no default value
+Default value: 0.0
 
 
 
@@ -435,7 +435,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
@@ -443,9 +443,9 @@ No supported hyperparameter specs.
 
 
 
-<details>
+<details style="margin-left:2em">
 
-<summary>use-nesterov</summary>
+<summary style="margin-left:-2em">use-nesterov</summary>
 
 
 
@@ -453,7 +453,7 @@ _Whether to use Nesterov momentum in the SGD optimizer_
 
 Argument type: bool
 
-This argument has no default value
+Default value: False
 
 
 
@@ -461,7 +461,7 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
@@ -474,15 +474,15 @@ No supported hyperparameter specs.
 </details>
 
 
-<details>
-<summary>loss</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">loss</summary>
 
 
 _Loss to use in the training process_
 
 Argument type: str
 
-This argument has no default value
+Default value: crossentropy
 
 
 
@@ -490,20 +490,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>learning-rate-start</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">learning-rate-start</summary>
 
 
 _Initial learning rate for the learning process_
 
 Argument type: float (minimum: 0.0)
 
-This argument has no default value
+Default value: 0.005
 
 
 
@@ -511,20 +511,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>learning-rate-stop</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">learning-rate-stop</summary>
 
 
 _Learnign rate after "learning-rate-steps" steps_
 
 Argument type: float (minimum: 0.0)
 
-This argument has no default value
+Default value: 0.0005
 
 
 
@@ -532,20 +532,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>learning-rate-steps</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">learning-rate-steps</summary>
 
 
 _Amount of decay steps requierd to go from start to stop LR_
 
 Argument type: int (minimum: 1)
 
-This argument has no default value
+Default value: 470
 
 
 
@@ -553,20 +553,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>learning-rate-power</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">learning-rate-power</summary>
 
 
 _Degree of the polynomial to use for the learning rate._
 
 Argument type: float (minimum: 0.0)
 
-This argument has no default value
+Default value: 1.0
 
 
 
@@ -574,20 +574,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and floats
 
 </details>
 
 
-<details>
-<summary>batch-size</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">batch-size</summary>
 
 
 _Batch size used during training_
 
 Argument type: int (minimum: 1)
 
-This argument has no default value
+Default value: 32
 
 
 
@@ -595,20 +595,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>use-trainable-embedding</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">use-trainable-embedding</summary>
 
 
 _Whether to make the word-embedding trainable._
 
 Argument type: bool
 
-This argument has no default value
+Default value: False
 
 
 
@@ -616,6 +616,6 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>

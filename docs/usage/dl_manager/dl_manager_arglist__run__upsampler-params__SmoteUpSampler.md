@@ -3,15 +3,15 @@
 ---
 
 
-<details>
-<summary>smote</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">smote</summary>
 
 
 _Variant of the SMOTE algorithm to use_
 
 Argument type: str
 
-This argument has no default value
+Default value: default
 
 
 
@@ -19,6 +19,6 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>

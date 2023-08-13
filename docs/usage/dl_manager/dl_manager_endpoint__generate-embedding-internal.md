@@ -14,8 +14,8 @@ _Usually, the outward-facing endpoint retrieves a config from the database, and 
 
 ## Arguments
 
-<details>
-<summary>embedding-id</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">embedding-id</summary>
 
 
 _Embedding to train_
@@ -33,13 +33,13 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>embedding-generator</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">embedding-generator</summary>
 
 
 _Type of embedding to train._
 
-Argument type: enum (possible values: `Doc2VecGenerator`, `Word2VecGenerator`, `DictionaryGenerator`, `IDFGenerator`)
+Argument type: enum (possible values: `IDFGenerator`, `Doc2VecGenerator`, `DictionaryGenerator`, `Word2VecGenerator`)
 
 Numer of arguments: A single value.
 
@@ -52,8 +52,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>embedding-config</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">embedding-config</summary>
 
 
 _Config of the embedding_
@@ -71,8 +71,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>training-data-query</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">training-data-query</summary>
 
 
 _Query to obtain data from the database for training_
@@ -90,8 +90,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>database-url</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">database-url</summary>
 
 
 _URL of the database (wrapper)_

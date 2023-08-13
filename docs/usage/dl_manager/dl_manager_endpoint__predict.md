@@ -8,8 +8,8 @@
 
 ## Arguments
 
-<details>
-<summary>model</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">model</summary>
 
 
 _Model to predict with_
@@ -27,8 +27,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>version</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">version</summary>
 
 
 _Trained instance of the given model to use for prediction_
@@ -46,8 +46,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>data-query</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">data-query</summary>
 
 
 _Query used to retrieve issues to predict_
@@ -65,8 +65,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>database-url</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">database-url</summary>
 
 
 _URL of the database (wrapper)_

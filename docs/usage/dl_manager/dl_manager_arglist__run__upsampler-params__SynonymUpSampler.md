@@ -3,15 +3,15 @@
 ---
 
 
-<details>
-<summary>word-embedding</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">word-embedding</summary>
 
 
 _Path to the word embedding file to use to determine synonyms_
 
 Argument type: str
 
-Default value: None
+This argument has no default value
 
 
 
@@ -19,20 +19,20 @@ Default value: None
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values
 
 </details>
 
 
-<details>
-<summary>min-replace</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">min-replace</summary>
 
 
 _Minimum amount of words to replace per issue_
 
 Argument type: int (minimum: 1)
 
-This argument has no default value
+Default value: 10
 
 
 
@@ -40,20 +40,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>max-replace</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">max-replace</summary>
 
 
 _Maximum amount of words to replace per issue_
 
 Argument type: int (minimum: 1)
 
-This argument has no default value
+Default value: 20
 
 
 
@@ -61,20 +61,20 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>
 
 
-<details>
-<summary>n-synonyms</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">n-synonyms</summary>
 
 
 _Amount of synonyms to consider per replacement_
 
 Argument type: int (minimum: 1)
 
-This argument has no default value
+Default value: 5
 
 
 
@@ -82,6 +82,6 @@ This argument has no default value
 
 
 
-No supported hyperparameter specs.
+Supported hyperparameter specs: values and range
 
 </details>

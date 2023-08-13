@@ -8,8 +8,8 @@
 
 ## Arguments
 
-<details>
-<summary>embedding-id</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">embedding-id</summary>
 
 
 _Embedding to train_
@@ -27,8 +27,8 @@ There are no additional constraints on this argument.
 </details>
 
 
-<details>
-<summary>database-url</summary>
+<details style="margin-left:2em">
+<summary style="margin-left:-2em">database-url</summary>
 
 
 _URL of the database (wrapper)_
