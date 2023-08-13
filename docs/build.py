@@ -205,7 +205,7 @@ class BuilderParameter:
                             writer.text(f'Argument type: {self.arg_type} (minimum: {start}, maximum: {stop})') 
                 case _ as x:
                     writer.text(f'Argument type: {x}')
-            if self.has_default:
+            if not self.has_default:
                 writer.text('This argument has no default value')
             else:
                 writer.text(f'Default value: {self.default}')
@@ -299,7 +299,7 @@ class MarkdownWriter:
         self._collapsible.append([])
         yield 
         stored = self._collapsible.pop(-1)
-        self._write(['', '<details>', f'<summary>{title}</summary>', ''])
+        self._write(['', '<details style="margin-left:2em">', f'<summary style="margin-left:-2em">{title}</summary>', ''])
         if not self._collapsible:
             def _interleave(x):
                 for y in x:
