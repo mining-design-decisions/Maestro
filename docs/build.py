@@ -94,9 +94,9 @@ class EndpointArgument:
                     opts = ', '.join(f'`{y}`' for y in self.options)
                     writer.text(f'Argument type: enum (possible values: {opts})')
                 case 'arglist':
-                    writer.text(f'Argument type: arglist')
+                    writer.text(f'Argument type: [arglist](./dl_manager_arglist__{parent_name}__{self.name}.md)')
                 case 'hyper_arglist':
-                    writer.text(f'Argument type: hyper_arglist')
+                    writer.text(f'Argument type: [hyper_arglist](./dl_manager_arglist__{parent_name}__{self.name}.md)')
                 case 'dynamic_enum':
                     opts = ', '.join(f'`{y}`' for y in dynamic_enums[parent_name][self.name])
                     writer.text(f'Argument type: enum (possible values: {opts})')
@@ -180,8 +180,54 @@ class BuilderParameter:
     minimum: str | None         # Numerical 
     maximum: str | None         # Numerical 
     options: list[str] | None   # enums 
-    spec: typing.Any | None     # nested 
+    spec: dict[str, list[BuilderParameter]] | None     # nested 
     hyper_param_specs: list[str]
+
+    def write_markdown(self, writer: MarkdownWriter):
+        if self.spec is not None:
+            return self.write_nested_args(writer)
+        with writer.collapsible(self.name):
+            writer.text_italic(self.description)
+            match self.arg_type:
+                case 'enum':
+                    assert self.options is not None 
+                    opts = ', '.join(f'`{x}`' for x in self.options)
+                    writer.text(f'Argument type: enum (possible values: {opts})') 
+                case 'float' | 'int':
+                    match (self.minimum, self.maximum):
+                        case (None, None):
+                            writer.text(f'Argument type: {self.arg_type} (no restrictions)')
+                        case (None, stop):
+                            writer.text(f'Argument type: {self.arg_type} (maximum: {stop})')
+                        case (start, None):
+                            writer.text(f'Argument type: {self.arg_type} (minimum: {start})') 
+                        case (start, stop):
+                            writer.text(f'Argument type: {self.arg_type} (minimum: {start}, maximum: {stop})') 
+                case _ as x:
+                    writer.text(f'Argument type: {x}')
+            if self.has_default:
+                writer.text('This argument has no default value')
+            else:
+                writer.text(f'Default value: {self.default}')
+            writer.hrule()
+            if self.hyper_param_specs:
+                writer.text(f'Supported hyperparameter specs: {join_items(self.hyper_param_specs)}')
+            else:
+                writer.text(f'No supported hyperparameter specs.')
+
+    def write_nested_args(self, writer: MarkdownWriter):
+        assert self.spec is not None 
+        with writer.collapsible(self.name):
+            writer.text_italic(self.description)
+            writer.text('Argument type: nested arglist.')
+            writer.text('Default values are inherited from contained child arguments.')
+            writer.text('Hyper-parameter specs are inherited from nested child arguments.')
+            writer.text_bold('Nested arguments:')
+            for cat, args in self.spec.items():
+                with writer.collapsible(cat):
+                    for arg in args:
+                        arg.write_markdown(writer)
+            
 
 
 ##############################################################################
@@ -195,18 +241,18 @@ class MarkdownWriter:
     def __init__(self):
         self._files = collections.defaultdict(list)
         self._file = None 
-        self._collapsible = None 
+        self._collapsible = []
 
     def flush(self):
         assert self._file is None 
-        assert self._collapsible is None 
+        assert not self._collapsible 
         for filename, content in self._files.items():
             with open(filename, 'w') as file:
                 file.write('\n'.join(content))
 
     @contextlib.contextmanager
     def file(self, filename: str):
-        if self._collapsible is not None:
+        if self._collapsible:
             raise ValueError('Currently inside collapsible')
         self._file, old = filename, self._file  
         yield self 
@@ -215,8 +261,8 @@ class MarkdownWriter:
     def _write(self, content: typing.Iterable[str]):
         if self._file is None:
             raise ValueError('No Markdown file specified')
-        if self._collapsible is not None:
-            self._collapsible.extend(content)
+        if self._collapsible:
+            self._collapsible[-1].extend(content)
         else:
             self._files[self._file].extend(content)
 
@@ -248,18 +294,21 @@ class MarkdownWriter:
 
     @contextlib.contextmanager
     def collapsible(self, title: str):
-        if self._collapsible is not None:
-            raise ValueError('Currently inside collapsible')
-        self._collapsible = []
+        #if self._collapsible is not None:
+        #    raise ValueError('Currently inside collapsible')
+        self._collapsible.append([])
         yield 
-        stored = self._collapsible
-        self._collapsible = None 
+        stored = self._collapsible.pop(-1)
         self._write(['', '<details>', f'<summary>{title}</summary>', ''])
-        def _interleave(x):
-            for y in x:
+        if not self._collapsible:
+            def _interleave(x):
+                for y in x:
+                    yield ''
+                    yield y 
                 yield ''
-                yield y 
-            yield ''
+        else:
+            def _interleave(x):
+                yield from x 
         self._write(_interleave(stored))
         self._write(['</details>', ''])
         
@@ -292,7 +341,7 @@ def retrieve_dl_argument_info(dl_manager_url: str, unsafe_ssl: bool):
             name: _parse_single_arglist_part(value)
             for name, value in response.json().items()
         }
-        argument_list_specs[f'{cmd}/{arg}'] = spec
+        argument_list_specs[f'{cmd}__{arg}'] = spec
     # Step 3: Get constraint information 
     response = requests.get(f'{dl_manager_url}/constraints', verify=not unsafe_ssl)
     response.raise_for_status()
@@ -345,7 +394,10 @@ def _parse_single_arglist_part(arg_list):
             minimum=item.get('minimum', None),
             maximum=item.get('maximum', None),
             options=item.get('options', None),
-            spec=None,
+            spec={
+                name: _parse_single_arglist_part(value.values())
+                for name, value in item['spec'].items()                
+            } if 'spec' in item else None,
             hyper_param_specs=item['supported-hyper-param-specs'] 
         ) 
         for item in arg_list
@@ -360,6 +412,20 @@ def build_dl_manager_config_docs(dl_manager_url: str, unsafe_ssl: bool):
     writer = MarkdownWriter()
     for ep in endpoints:
         ep.write_markdown(writer, constraints, arg_lists, dynamic_enums)
+    for name, args in arg_lists.items():
+        with writer.file(f'./usage/dl_manager/dl_manager_arglist__{name}.md'):
+            writer.header(f'Arglist Documentation -- {name.replace("__", "/")}')
+            writer.hrule()
+            writer.header(f'Possible top-level items:', size=3)
+            for opt_name, opt_args in args.items():
+                target = f'./dl_manager_arglist__{name}__{opt_name}.md'
+                writer.header(f'[{opt_name}]({target})', size=4)
+                with writer.file(f'./usage/dl_manager/dl_manager_arglist__{name}__{opt_name}.md'):
+                    writer.header(f'Parameters for {opt_name} options of arglist {name.replace("__", "/")}')
+                    writer.hrule()
+                    for arg in opt_args:
+                        arg.write_markdown(writer)
+                
     writer.flush()
 
 
