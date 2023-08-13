@@ -16,7 +16,7 @@ The databases contain all data related to the deep learning models, annotated is
 in four separate databases.
 
 The first database (JiraRepos) contains the issue data that is pulled
-from the Jira API. This database is an updated version of \cite{montgomery_alternative_2022} and can be downloaded here
+from the Jira API. This database is an updated version of [[1]](#montgomery_alternative_2022) and can be downloaded here
 (https://zenodo.org/record/8225601 -> mongodump-JiraRepos_2023-03-07-16 00.archive). It contains issues from many
 projects from different ecosystems. Our system does not modify this database, except when the issue data is updated.
 This database is in practice therefore a read-only database.
@@ -281,7 +281,7 @@ to store this information:
 ```
 
 #### RepoInfo
-The initial script of \cite{montgomery_alternative_2022} did not provide a way to update the database. We extended
+The initial script of [[1]](#montgomery_alternative_2022) did not provide a way to update the database. We extended
 that script and incorporated it in Maestro. For each repository, we have to keep track of certain data. First, we
 have to store the repository URL to be able to download issues from the repository. We also store the date we last
 updated the issues. For the download process, we have to specify a batch size (how many issues are pulled at once from
@@ -382,3 +382,7 @@ The backup tool is a simple script that dumps all the data from the MiningDesign
 can be uploaded to e.g. Google Drive. This tool can be extended to also make backups for e.g. the Users database, but
 this was not necessary for our research. Furthermore, the script could be changed to upload to other storage locations.
 This tool is completely external to the system and is therefore optional to use.
+
+## References
+<a id="montgomery_alternative_2022">[1]</a> Montgomery, L., Lüders, C., & Maalej, W. (2022, May). An alternative issue tracking dataset of public jira
+repositories. In Proceedings of the 19th International Conference on Mining Software Repositories (pp. 73-77).
