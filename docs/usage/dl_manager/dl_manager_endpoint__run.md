@@ -58,7 +58,7 @@ There are no additional constraints on this argument.
 
 _Generator params. Items in the name=value format._
 
-Argument type: arglist
+Argument type: [arglist](./dl_manager_arglist__run__params.md)
 
 Numer of arguments: A single value.
 
@@ -320,7 +320,7 @@ There are no additional constraints on this argument.
 
 _Hyper-parameters params. Items in the name=value format._
 
-Argument type: arglist
+Argument type: [arglist](./dl_manager_arglist__run__hyper-params.md)
 
 Numer of arguments: A single value.
 
@@ -379,7 +379,7 @@ There are no additional constraints on this argument.
 
 _Parameters for the upsampler_
 
-Argument type: arglist
+Argument type: [arglist](./dl_manager_arglist__run__upsampler-params.md)
 
 Numer of arguments: A single value.
 
@@ -440,7 +440,7 @@ There are no additional constraints on this argument.
 
 _Hyper-parameters for the creation of a combined model_
 
-Argument type: arglist
+Argument type: [arglist](./dl_manager_arglist__run__combination-model-hyper-params.md)
 
 Numer of arguments: A single value.
 
@@ -503,7 +503,7 @@ There are no additional constraints on this argument.
 
 _Hyper-parameters for the meta-classifier_
 
-Argument type: arglist
+Argument type: [arglist](./dl_manager_arglist__run__stacking-meta-classifier-hyper-parameters.md)
 
 Numer of arguments: A single value.
 
@@ -982,7 +982,7 @@ There are no additional constraints on this argument.
 
 _Hyper-parameters params for the Keras Tuner. Items in the name=value format._
 
-Argument type: hyper_arglist
+Argument type: [hyper_arglist](./dl_manager_arglist__run__tuner-hyper-params.md)
 
 Numer of arguments: A single value.
 
@@ -1003,7 +1003,7 @@ There are no additional constraints on this argument.
 
 _Hyper-parameters for the creation of a combined model for keras tuner_
 
-Argument type: hyper_arglist
+Argument type: [hyper_arglist](./dl_manager_arglist__run__tuner-combination-model-hyper-params.md)
 
 Numer of arguments: A single value.
 

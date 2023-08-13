@@ -58,7 +58,7 @@ There are no additional constraints on this argument.
 
 _Config of the embedding_
 
-Argument type: arglist
+Argument type: [arglist](./dl_manager_arglist__generate-embedding-internal__embedding-config.md)
 
 Numer of arguments: A single value.
 
