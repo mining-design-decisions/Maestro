@@ -17,36 +17,35 @@ User -> Endpoint: train(config_id)
         deactivate DBApi
     Endpoint -> Endpoint: run(config)
         activate Endpoint
-        deactivate Endpoint
-        Endpoint -> ModelBuilder: factory, features = build_model_factory(config)
+        Endpoint -> TrainingPipeline: invoke(factory, features, config)
+            activate TrainingPipeline
+            TrainingPipeline -> ModelBuilder: factory, features = build_model_factory(config)
             activate ModelBuilder
             ModelBuilder -> FeatureGenerator: features = get_data(config)
                 activate FeatureGenerator
                 FeatureGenerator -> FeatureGenerator: feature_factory = get_factory(config.feature_generator)
-                    activate FeatureGenerator  
+                    activate FeatureGenerator
                     deactivate FeatureGenerator
                 FeatureGenerator -> DBApi: data = fetch_data(config.query)
                     activate DBApi
                     deactivate DBApi
                 FeatureGenerator -> FeatureGenerator: features = feature_factory.generate_features(data)
-                    activate FeatureGenerator  
+                    activate FeatureGenerator
                     deactivate FeatureGenerator
                 deactivate FeatureGenerator
             ModelBuilder -> ModelBuilder: factory = <model builder callback>
-                activate ModelBuilder  
+                activate ModelBuilder
                 deactivate ModelBuilder
             deactivate ModelBuilder
-         Endpoint -> TrainingPipeline: invoke(factory, features, config)
-            activate TrainingPipeline
             TrainingPipeline -> Splitter: training_data, validation_data, testing_data = split(features, config)
-                activate Splitter 
+                activate Splitter
                 Splitter -> Splitter: splitter = get_splitter(config)
                     activate Splitter
                     deactivate Splitter
                 Splitter -> Splitter: training_data, validation_data, testing_data = splitter.split(features)
                     activate Splitter
                     deactivate Splitter
-                deactivate Splitter 
+                deactivate Splitter
             loop foreach (train, validation, test) in zip(training_data, validation_data, testing_data)
                 TrainingPipeline -> ModelBuilder: model = factory()
                     activate ModelBuilder
@@ -56,11 +55,8 @@ User -> Endpoint: train(config_id)
                     ModelBuilder -> ModelBuilder: model = builder.build(config)
                         activate ModelBuilder
                         deactivate ModelBuilder
-                    deactivate ModelBuilder 
-                TrainingPipeline -> TrainingPipeline: trained_model, training_stats = model.fit(train, validation, config)
-                    activate TrainingPipeline
-                    deactivate TrainingPipeline
-                TrainingPipeline -> TrainingPipeline: testing_stats = model.evaluate(test)
+                    deactivate ModelBuilder
+                TrainingPipeline -> TrainingPipeline: trained_model, training_stats, testing_stats = fit(model, train, validation, test, config)
                     activate TrainingPipeline
                     deactivate TrainingPipeline
                 TrainingPipeline -> DBApi: identifier = upload_stats(training_stats, testing_stats)
@@ -69,14 +65,15 @@ User -> Endpoint: train(config_id)
                 TrainingPipeline -> DBApi: identifier = upload_model(trained_model)
                     activate DBApi
                     deactivate DBApi
-                TrainingPipeline -> TrainingPipeline: store identifiers 
+                TrainingPipeline -> TrainingPipeline: store identifiers
                     activate TrainingPipeline
                     deactivate TrainingPipeline
-            end loop 
-            deactivate TrainingPipeline
-        Endpoint <-- TrainingPipeline: identifiers 
-    deactivate Endpoint
+            end loop
+        Endpoint <-- TrainingPipeline: identifiers
+        deactivate TrainingPipeline
+        deactivate Endpoint
 User <-- Endpoint: identifiers
+deactivate Endpoint
 deactivate User 
 
 @enduml 

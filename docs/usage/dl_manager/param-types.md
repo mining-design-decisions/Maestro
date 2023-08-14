@@ -17,6 +17,20 @@ In such cases, the argument must be a value which is valid input for the
 constructor of that class. 
 For instance, for the `pathlib.Path` class, this would be a string.
 
+## Query 
+
+Queries specify issues to be retrieved from the database. 
+The basic syntax for queries is used on MongoDB query syntax, but 
+with certain restrictions.
+
+- `OR` operations are written as `{"$or": []}`, where the list contains the 
+    branches for the OR.
+- `AND` operations are written as `{"$and": []}`, where the list contains the 
+    branches for the AND.
+- The only field which can be tested is that `tags` field of issues.
+    This field can only be tested for equality (`$eq` or `$ne`);
+    Example: `{"tags": {"$eq": "maven"}}`.
+
 ## arglist 
 
 Arglists are the most important parameter type in the deep learning manager.
