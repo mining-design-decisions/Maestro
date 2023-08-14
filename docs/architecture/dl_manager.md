@@ -11,7 +11,7 @@ This has resulted in a significant amount of technical debt.
 Changes to address this are planned in the Maestro roadmap.
 However, there is no way to explain all detailed ins and outs 
 regarding the architecture of the deep learning manager.
-In stead, we will present the high level architecture.
+Instead, we will present the high level architecture.
 This also corresponds to an idealised architecture of the system;
 Ideally, the system will be refactored to adhere to the 
 architecture explained here. However, currently, there are 
@@ -21,8 +21,23 @@ enough for most practical applications.
 
 ---
 
+## Logical View
+
+![alt](./figures/dl_manager.drawio.png)
+
+
 ## Training Sequence Diagram 
 
 ![alt](./figures/training.svg)
 
-## Component Diagram 
+--- 
+
+## Argument Specification
+
+---
+
+## Argument Parsing & State Management 
+
+---
+
+## Storing Trained Models & Loading Trained Models 
