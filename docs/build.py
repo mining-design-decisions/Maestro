@@ -211,7 +211,7 @@ class BuilderParameter:
                 writer.text(f'Default value: {self.default}')
             writer.hrule()
             if self.hyper_param_specs:
-                writer.text(f'Supported hyperparameter specs: {join_items(self.hyper_param_specs)}')
+                writer.text(f'Supported hyperparameter specs: {join_items([f"`{y}`" for y in self.hyper_param_specs])}')
             else:
                 writer.text(f'No supported hyperparameter specs.')
 
