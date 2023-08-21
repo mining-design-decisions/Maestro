@@ -213,7 +213,7 @@ python3.10 -m dl_manager --script my_script.json
 ## Environment Variables
 
 - `DL_MANAGER_RUNNING_ON_PEREGRINE`: A custom tag for use by users from the University of Groningen. 
-    Must be set to `true` 
+    Must be set to `true` when running the deep learning manager on Hábrók in scripting mode. 
 - `DL_MANAGER_ALLOW_UNSAFE_SSL`: Set to `true` when the deep learning manager is allowed to 
     connect to the database API when the database API is deployed using self-signed SSL certificates.
 - `DL_MANAGER_NUM_THREADS`: integer specifying how many threads the system is allowed to use.
