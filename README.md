@@ -42,6 +42,8 @@ SSL_KEYFILE = '<name of key file>'
 SSL_CERTFILE = '<name of certificate file>'
 ```
 
+Note that every service can have its own SSL certificate; they do not all need to use the same one. 
+
 In case of local deployment (and **only** in case of local deployment), self-signed
 SSL certificates can be used. The following command can be used to generate 
 self-signed certificates using OpenSSL (note: all fields in the prompt can be left blank):
