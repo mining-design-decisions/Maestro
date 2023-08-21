@@ -15,7 +15,45 @@ The components making up Maestro are divided across five separate repositories:
 - [Database API Wrapper Library](https://github.com/mining-design-decisions/maestro-issue-db-api-client)
 
 The first four components are required to run the actual tool. 
-They can be installed by cloning each repo and starting each service using docker compose.
+They can be installed by cloning each repo.
+
+The deep learning manager, search engine, and database API all need SSL certificates
+to function: 
+
+- For the deep learning, the full details can be found in the 
+[usage guide](./docs/usage/dl_manager/index.md#preparations-before-running-).
+When running the deep learning manager using docker compose, the key file must be 
+called `server.key` and the certificate file must be called `server.crt`.
+These files must be contained in the same file as the `Dockerfile` file, 
+which is simply the `maestro-dl-manager` folder.
+
+- The keyword search engine requires specific names for the certificate and key files.
+They should be called `fullchain.pem` and `privkey.pem`, respectively. 
+Both files should be contained in the same folder as the `Dockerfile` file, which 
+is the `maestro-search-engine/pylucene` folder.
+
+- The certificate and key files for the database API can have arbitrary names.
+The files should both be placed in the same file as the `Dockerfile` file,
+which is the `maestro-issues-db/issues-db-api` folder.
+Afterward, the file `maestro-issues-db/issues-db-api/app/config.py` should be created,
+with the following content:
+```python
+SSL_KEYFILE = '<name of key file>'
+SSL_CERTFILE = '<name of certificate file>'
+```
+
+In case of local deployment (and **only** in case of local deployment), self-signed
+SSL certificates can be used. The following command can be used to generate 
+self-signed certificates using OpenSSL (note: all fields in the prompt can be left blank):
+
+```shell 
+openssl req -new -x509 -nodes -sha256 -out server.crt -keyout server.key
+```
+
+Windows users can use the Bash shell installed alongside 
+[Git for Windows](https://gitforwindows.org/) in order to get access to the openssl command.
+
+Next, each service can be started using docker compose.
 The following can be used as a quick-start script:
 
 ```bash 
@@ -53,6 +91,13 @@ label issues, one must be logged in.
 Account creation is explained in the [usage documentation for the database API](./docs/usage/issues_db_api/README.md#users)
 
 The client library is meant for the development of external scripts which interact with the database. The client library can be installed using `pip install issue-db-api`.
+
+### Detailed Installation Instructions:
+
+- [User Interface](./docs/usage/user_interface/README.md)
+- [Deep Learning Manager](./docs/usage/dl_manager/index.md)
+- [Search Engine](https://github.com/mining-design-decisions/maestro-search-engine)
+- [Database Setup & API](https://github.com/mining-design-decisions/maestro-issues-db)
 
 ---
 
