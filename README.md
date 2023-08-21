@@ -42,6 +42,12 @@ The deep learning manager can be start with different docker compose files in or
 enable GPU acceleration. More details can be found 
 [here](./docs/usage/dl_manager/index.md#running-using-docker-)
 
+The URLs for the database API, keyword search API,
+and the deep learning manager must be entered in the login tab of the UI. 
+When deploying locally, these addresses will be `https://localhost:8000`, `localhost:9011`,
+and `https://localhost:8042`, respectively. 
+Of course, these URLs will be different when these APIs are deployed remotely.
+
 By default, all data in the UI is read-only. In order to create new machine learning models or 
 label issues, one must be logged in.
 Account creation is explained in the [usage documentation for the database API](./docs/usage/issues_db_api/README.md#users)
