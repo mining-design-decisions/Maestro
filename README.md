@@ -58,6 +58,26 @@ openssl req -new -x509 -nodes -sha256 -out server.crt -keyout server.key
 Windows users can use the Bash shell installed alongside 
 [Git for Windows](https://gitforwindows.org/) in order to get access to the openssl command.
 
+If the database is deployed locally, the deep learning manager should be 
+started with the `DL_MANAGER_ALLOW_UNSAFE_SSL` environment variable set to 
+`true`. When running through Docker, this variable should be set in the 
+docker compose file, e.g. like this:
+
+```
+version: '3.1'
+services:
+  dl-manager:
+    container_name: dl-manager
+    build:
+      context: ./
+      dockerfile: Dockerfile-no-gpu
+    image: dl-manager
+    ports:
+      - '9011:9011'
+    environment:
+      - DL_MANAGER_ALLOW_SELF_SIGNED_CERTIFICATE=TRUE
+```
+
 Next, each service can be started using docker compose.
 The following can be used as a quick-start script:
 
