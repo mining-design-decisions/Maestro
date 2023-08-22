@@ -87,8 +87,8 @@ enable GPU acceleration. More details can be found
 
 The URLs for the database API, keyword search API,
 and the deep learning manager must be entered in the login tab of the UI. 
-When deploying locally, these addresses will be `https://localhost:8000`, `localhost:9011`,
-and `https://localhost:8042`, respectively. 
+When deploying locally, these addresses will be `https://localhost:8000`, `https://localhost:8042`,
+and `https://localhost:9011`, respectively. 
 Of course, these URLs will be different when these APIs are deployed remotely.
 
 By default, all data in the UI is read-only. In order to create new machine learning models or 
