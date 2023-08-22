@@ -35,9 +35,12 @@ is the `maestro-search-engine/pylucene` folder.
 - The certificate and key files for the database API can have arbitrary names.
 The files should both be placed in the same file as the `Dockerfile` file,
 which is the `maestro-issues-db/issues-db-api` folder.
+Additionally, the database API needs a secret key used for password hasing,
+which can be generated using `openssl rand -hex 32`.
 Afterward, the file `maestro-issues-db/issues-db-api/app/config.py` should be created,
 with the following content:
 ```python
+SECRET_KEY = '<key generated using openssl>'
 SSL_KEYFILE = '<name of key file>'
 SSL_CERTFILE = '<name of certificate file>'
 ```
