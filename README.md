@@ -276,6 +276,13 @@ Additionally, the format could change again in the future.
 It would be nice if the UI were able to automatically deal with this,
 by automatically detecting and updating outdated model configs. 
 
+### Improve testability
+
+Currently, the deep learning code does not have unit tests or integration test.
+The main reason for this is that it is hard to write tests for the code.
+The lack of automated tests is making changes or additions to the code difficult, because they often introduce unforeseen bugs or unintended changes in behaviour.
+Improving the testability of the code and writing automated tests would be a good change to make, but it certainly would require a ton of effort.
+
 ---
 
 # Contributing 
