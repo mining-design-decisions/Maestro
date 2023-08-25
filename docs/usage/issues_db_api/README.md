@@ -106,7 +106,7 @@ users_collection.insert_one(
 The script requires `passlib` and `pymongo` to be installed. These can be installed using 
 
 ```shell 
-python3 -m pip install passlib pymongo 
+python3 -m pip install passlib[bcrypt] pymongo 
 ```
 
 In case `pip` is not installed, it can be bootstrapped by running 
