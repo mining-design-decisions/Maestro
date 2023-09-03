@@ -145,7 +145,7 @@ The client library is meant for the development of external scripts which intera
 
 # Usage Guides 
 
-- [User Interface](./docs/usage/user_interface/README.md)
+- [User Interface](./docs/usage/user_interface/index.md)
 - [Deep Learning Manager](./docs/usage/dl_manager/index.md)
 - [Search Engine API](./docs/usage/search_engine/README.md)
 - [Database API](./docs/usage/issues_db_api/README.md)
