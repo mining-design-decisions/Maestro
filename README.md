@@ -283,6 +283,17 @@ The main reason for this is that it is hard to write tests for the code.
 The lack of automated tests is making changes or additions to the code difficult, because they often introduce unforeseen bugs or unintended changes in behaviour.
 Improving the testability of the code and writing automated tests would be a good change to make, but it certainly would require a ton of effort.
 
+### Incremental Indexing in Search Engine 
+The search engine currently has to regenerate the entire index 
+when adding new issues or predictions. More fine-grained tracking 
+of when predictions are computed or when issues are updated 
+could potentially enable the development of partial index updates,
+saving both wall and CPU time.
+
+### Fix bugs in Search Engine 
+The search engine ignores the prediction filters in case there 
+are no predictions available for said issue.
+
 ---
 
 # Contributing 
