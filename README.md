@@ -29,8 +29,8 @@ which is simply the `maestro-dl-manager` folder.
 
 - The keyword search engine requires specific names for the certificate and key files.
 They should be called `fullchain.pem` and `privkey.pem`, respectively. 
-Both files should be contained in the same folder as the `Dockerfile` file, which 
-is the `maestro-search-engine/pylucene` folder.
+Two pairs of such files are requires. One in the `pylucene` folder, 
+and the other in the `status_proxy` folder.
 
 - The certificate and key files for the database API can have arbitrary names.
 The files should both be placed in the same file as the `Dockerfile` file,
