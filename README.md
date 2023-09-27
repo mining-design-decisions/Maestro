@@ -107,16 +107,36 @@ enable GPU acceleration. More details can be found
 
 The database can be initialised with existing database archives containing 
 issues from many open source projects, and a number of pre-trained deep learning models.
-There archives can be downloaded from [here](https://zenodo.org/record/8225601).
+There archives can be downloaded from [here](https://zenodo.org/record/8372644).
+The JiraRepos archive contains a large number of issues from open source projects.
+There are two variants of the MiningDesignDecisions archive. These archives contain
+trained deep learning models. The normal variant contains a large number of different 
+trained models which were evaluated. The lite variant contains only the best performing
+(BERT) model.
 The archives can be uploaded when the database is running, by `cd`-ing into the 
 `maestro-issues-db` directory and executing the following commands:
 
+JiraRepos:
 ```shell 
 docker cp ./mongodump-JiraRepos_2023-03-07-16:00.archive mongo:/mongodump-JiraRepos.archive
 docker exec -i mongo mongorestore --gzip --archive=mongodump-JiraRepos.archive --nsFrom "JiraRepos.*" --nsTo "JiraRepos.*"
+```
+
+MiningDesignDecisions (normal):
+```shell 
 docker cp ./mongodump-MiningDesignDecisions.archive mongo:/mongodump-MiningDesignDecisions.archive
 docker exec -i mongo mongorestore --gzip --archive=mongodump-MiningDesignDecisions.archive --nsFrom "MiningDesignDecisions.*" --nsTo "MiningDesignDecisions.*"
 ```
+
+MiningDesignDecisions (lite):
+```shell 
+docker cp ./mongodump-MiningDesignDecisions-lite.archive mongo:/mongodump-MiningDesignDecisions-lite.archive
+docker exec -i mongo mongorestore --gzip --archive=mongodump-MiningDesignDecisions-lite.archive --nsFrom "MiningDesignDecisions.*" --nsTo "MiningDesignDecisions.*"
+```
+
+By default, all data in the UI is read-only. In order to create new machine learning models or 
+label issues, one must be logged in.
+Account creation is explained in the [usage documentation for the database API](./docs/usage/issues_db_api/README.md#users)
 
 The URLs for the database API, keyword search API,
 and the deep learning manager must be entered in the login tab of the UI. 
@@ -127,10 +147,6 @@ In case of local deployment, one may have to resort to using the IP address
 of the machine instead of `localhost` (obtainable though `ipconfig` (windows) or `ifconfig` (unix)).
 This is a limitation stemming from the fact that multiple docker compose files are used.
 Fixing this issue is planned as part of future development on Maestro.
-
-By default, all data in the UI is read-only. In order to create new machine learning models or 
-label issues, one must be logged in.
-Account creation is explained in the [usage documentation for the database API](./docs/usage/issues_db_api/README.md#users)
 
 The client library is meant for the development of external scripts which interact with the database. The client library can be installed using `pip install issue-db-api`.
 
