@@ -241,6 +241,9 @@ def main():
             download()
         if option == 'exit':
             break
+
+if __name__ == '__main__':
+    main()
 ```
 
 
