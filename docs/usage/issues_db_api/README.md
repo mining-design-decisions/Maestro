@@ -120,6 +120,130 @@ The last database is the Statistics database. This database functions as a cache
 it can store the description length of issues, or the amount of issues links. The exact behaviour that is desired is
 flexible, and therefore this collection does not have a fixed schema.
 
+## Importing Repos
+Currently, Jira repos and their projects cannot be imported directly from the user interface.
+Instead, this can be done by using the script below. Note that this script requires 
+the Python requests library to be installed (`pip install requests`).
+
+```python 
+import requests
+
+
+def ask(prompt, validator=None, msg=None):
+    while True:
+        inp = input(f'{prompt}: ')
+        if not inp:
+            print('E: Empty input')
+        if validator is not None and not validator(inp):
+            print(f'E: {msg}')
+            continue
+        return inp
+
+
+def ask_with_default(prompt, default, validator=None, error_msg=None):
+    while True:
+        inp = input(f'{prompt} [default: {default}]: ')
+        if not inp:
+            inp = default
+        if validator is not None and not validator(inp):
+            print(f'E: {error_msg}')
+            continue
+        return inp
+
+
+def authenticate(url):
+    username = ask('Database Username')
+    password = ask('Database Password')
+    print('Retrieving login token...')
+    form = (
+        ('username', (None, username)),
+        ('password', (None, password))
+    )
+    response = requests.post(f'{url}/token', files=form, verify=False)
+    response.raise_for_status()
+    token = response.json()['access_token']
+    return token
+
+
+def register():
+    print('Database Credentials')
+    database_url = ask('Database URL:')
+    token = authenticate(database_url)
+    hrule()
+    print('Jira Repository')
+    print('You will be asked to enter the information for a Jira repository.')
+    print('Example input:')
+    print('Repository name: Apache')
+    print('Repository URL: https://issues.apache.org/jira')
+    print()
+    print('This will register the repository with the given URL under the given name in Maestro')
+    print('If you later import projects from this repository, all projects will be registered as `{repo_name}-{project_name}`')
+    repo_name = ask('Repository Name')
+    repo_url = ask('Repository URL')
+    download_date = ask_with_default('Download date (issues before this date will never be downloaded) (yyyy-mm-dd)', '1970-01-01')
+    batch_size = ask_with_default('Download Batch Size (set appropriately to avoid rate limits)', 1000, str.isdigit, 'Expected an integer')
+    wait_time = ask_with_default('Waiting time between batches in minutes (set appropriately to avoid rate limits)', 0, str.isdigit, 'Expected an integer')
+    hrule()
+    print('Registering repository...')
+    payload = {
+        'repo_name': repo_name,
+        'repo_url': repo_url,
+        'download_date': download_date,
+        'batch_size': int(batch_size),
+        'query_wait_time_minutes': int(wait_time)
+    }
+    response = requests.post(f'{database_url}/jira-repos', json=payload, headers={'Authorization': 'Bearer ' + token}, verify=False)
+    response.raise_for_status()
+    print('Done')
+
+
+def download():
+    print('Database Credentials')
+    database_url = ask('Database URL:')
+    token = authenticate(database_url)
+    hrule()
+    print('Note: if you want to download issues from repositories requiring authentication, you should download issues from them 1-by-1')
+    repos = ask_with_default('What repository do you want to download issues from (comma separated list)?', 'all')
+    if repos == 'all':
+        repos = None
+    else:
+        repos = repos.split(',')
+    if ask('Does this Jira Repository require authentication? [yes/no]', lambda x: x in ['yes', 'no'], 'Invalid answer') == 'y':
+        username = ask('Repository Username')
+        password = ask('Repository Password')
+    else:
+        username = password = None
+    payload = {
+        'repos': repos,
+        'enable_auth': username is not None,
+        'username': username,
+        'password': password
+    }
+    print('Downloading issues (this may take a while)...')
+    response = requests.post(f'{database_url}/jira-repos-download', json=payload, headers={'Authorization': 'Bearer ' + token}, verify=False)
+    print('Done')
+    
+
+
+def hrule():
+    print('-' * 72)
+
+
+
+def main():
+    print('Maestro -- Jira Import Utility')
+    while True:
+        hrule()
+        option = ask('What do you want to do [register/download/exit]', lambda x: x in ('register', 'download', 'exit'), 'Invalid action')
+        if option == 'register':
+            register()
+        if option == 'download':
+            download()
+        if option == 'exit':
+            break
+```
+
+
 ## References
 <a id="montgomery_alternative_2022">[1]</a> Montgomery, L., Lüders, C., & Maalej, W. (2022, May). An alternative issue tracking dataset of public jira
 repositories. In Proceedings of the 19th International Conference on Mining Software Repositories (pp. 73-77).
