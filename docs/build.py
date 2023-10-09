@@ -12,6 +12,7 @@ import argparse
 import collections
 import contextlib
 import dataclasses
+import itertools
 import logging 
 import os 
 import subprocess
@@ -134,12 +135,81 @@ class EndpointArgument:
                 writer.text('There are no additional constraints on this argument.')
             else:
                 writer.text('Additional constraints:')
-                writer.itemize(
-                    *(
-                        f'Constraint on {join_items(constraint["arguments"])}: {constraint["description"]}'
-                        for constraint in constraints[c_key]
+                for constraint in constraints[c_key]:
+                    self.render_constraint(writer, constraint)
+
+    def render_constraint(self, writer: MarkdownWriter, constraint):
+        with writer.collapsible(f'Constraint on arguments: {join_items(constraint["arguments"])}'):
+            match constraint['constraint']['type']:
+                case 'boolean-expression':
+                    writer.text('The following condition must hold:')
+                    writer.text(
+                        f"`{_render_constraint_spec(constraint['constraint']['options']['expression'])}`"
                     )
-                )
+                case 'mutually-exclusive':
+                    writer.text('The following conditions are mutually exclusive:')
+                    writer.itemize(
+                        *(
+                            f'`{_render_constraint_spec(x)}`'
+                            for x in constraint['constraint']['options']['rules']
+                        )
+                    )
+                case 'forbids':
+                    main_arg = constraint['constraint']['options']['antecedent']
+                    x = f'`{_render_constraint_spec(main_arg)}`'
+                    writer.text(f'If {x}, then the following are not allowed:')
+                    writer.itemize(
+                        *(
+                            f'`{_render_constraint_spec(x)}`'
+                            for x in constraint['constraint']['options']['consequents']
+                        )
+                    )
+                case _ as x:
+                    raise ValueError(f'Unknown constraint type: {x}')
+
+
+def _render_constraint_spec(spec):
+    match spec['type']:
+        case 'value-check':
+            match spec['payload']['operation']:
+                case 'equal':
+                    lhs = spec['payload']['lhs']
+                    rhs = spec['payload']['rhs']
+                    return f'{_render_constraint_spec(lhs)} == {_render_constraint_spec(rhs)}'
+                case 'not-equal':
+                    lhs = spec['payload']['lhs']
+                    rhs = spec['payload']['rhs']
+                    return f'{_render_constraint_spec(lhs)} != {_render_constraint_spec(rhs)}'
+                case 'contains':
+                    container = spec['payload']['container']
+                    value = spec['payload']['value']
+                    return f'{_render_constraint_spec(value)} in {_render_constraint_spec(container)}'
+                case 'not-contains':
+                    container = spec['payload']['container']
+                    value = spec['payload']['value']
+                    return f'{_render_constraint_spec(value)} not in {_render_constraint_spec(container)}'
+                case _ as x:
+                    raise ValueError(f'Unknown value-check: {x}')
+        case 'value-specifier':
+            match spec['payload']['type']:
+                case 'length-of-argument-reference':
+                    return f'len({spec["payload"]["name"]})'
+                case 'argument-reference':
+                    return spec['payload']['name']
+                case 'constant':
+                    return repr(spec['payload']['value'])
+                case _ as x:
+                    raise ValueError(f'Unknown value-specifier type: {x}')
+        case 'value-expression':
+            match spec['payload']['operation']:
+                case 'or':
+                    lhs = spec['payload']['lhs']
+                    rhs = spec['payload']['rhs']
+                    return f'{_render_constraint_spec(lhs)} or {_render_constraint_spec(rhs)}'
+                case _ as x:
+                    raise ValueError(f'Unknown value-expression: {x}')
+        case _ as x:
+            raise ValueError(f'Unknown value-X: {x}')
 
 
 @dataclasses.dataclass
@@ -288,6 +358,8 @@ class MarkdownWriter:
         )
     
     def itemize(self, *items: str):
+        if any(x is None for x in items):
+            raise ValueError('Found none')
         self._write(
             (f'- {item}' for item in items)
         )
