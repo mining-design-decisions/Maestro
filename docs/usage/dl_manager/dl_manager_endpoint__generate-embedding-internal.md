@@ -39,7 +39,7 @@ There are no additional constraints on this argument.
 
 _Type of embedding to train._
 
-Argument type: enum (possible values: `IDFGenerator`, `Doc2VecGenerator`, `DictionaryGenerator`, `Word2VecGenerator`)
+Argument type: enum (possible values: `Doc2VecGenerator`, `IDFGenerator`, `DictionaryGenerator`, `Word2VecGenerator`)
 
 Numer of arguments: A single value.
 

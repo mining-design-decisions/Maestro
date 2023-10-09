@@ -19,6 +19,6 @@ Default value: default
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>

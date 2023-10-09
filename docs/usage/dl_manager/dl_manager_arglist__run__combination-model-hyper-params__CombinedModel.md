@@ -19,7 +19,7 @@ Default value: 1
 
 
 
-Supported hyperparameter specs: values and range
+Supported hyperparameter specs: `values` and `range`
 
 </details>
 
@@ -40,7 +40,7 @@ Default value: 32
 
 
 
-Supported hyperparameter specs: values and range
+Supported hyperparameter specs: `values` and `range`
 
 </details>
 
@@ -61,7 +61,7 @@ Default value: 32
 
 
 
-Supported hyperparameter specs: values and range
+Supported hyperparameter specs: `values` and `range`
 
 </details>
 
@@ -82,7 +82,7 @@ Default value: 32
 
 
 
-Supported hyperparameter specs: values and range
+Supported hyperparameter specs: `values` and `range`
 
 </details>
 
@@ -103,7 +103,7 @@ Default value: 32
 
 
 
-Supported hyperparameter specs: values and range
+Supported hyperparameter specs: `values` and `range`
 
 </details>
 
@@ -124,7 +124,7 @@ Default value: 32
 
 
 
-Supported hyperparameter specs: values and range
+Supported hyperparameter specs: `values` and `range`
 
 </details>
 
@@ -145,7 +145,7 @@ Default value: 32
 
 
 
-Supported hyperparameter specs: values and range
+Supported hyperparameter specs: `values` and `range`
 
 </details>
 
@@ -166,7 +166,7 @@ Default value: 32
 
 
 
-Supported hyperparameter specs: values and range
+Supported hyperparameter specs: `values` and `range`
 
 </details>
 
@@ -187,7 +187,7 @@ Default value: 32
 
 
 
-Supported hyperparameter specs: values and range
+Supported hyperparameter specs: `values` and `range`
 
 </details>
 
@@ -208,7 +208,7 @@ Default value: 32
 
 
 
-Supported hyperparameter specs: values and range
+Supported hyperparameter specs: `values` and `range`
 
 </details>
 
@@ -229,7 +229,7 @@ Default value: 32
 
 
 
-Supported hyperparameter specs: values and range
+Supported hyperparameter specs: `values` and `range`
 
 </details>
 
@@ -250,7 +250,7 @@ Default value: 32
 
 
 
-Supported hyperparameter specs: values and range
+Supported hyperparameter specs: `values` and `range`
 
 </details>
 
@@ -271,7 +271,7 @@ Default value: linear
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>
 
@@ -292,7 +292,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -313,7 +313,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -334,7 +334,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -355,7 +355,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -376,7 +376,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -397,7 +397,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -418,7 +418,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -439,7 +439,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -460,7 +460,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -481,7 +481,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -502,7 +502,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -523,7 +523,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -544,7 +544,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -565,7 +565,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -586,7 +586,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -607,7 +607,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -628,7 +628,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -649,7 +649,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -670,7 +670,7 @@ Default value: adam
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>
 
@@ -717,7 +717,7 @@ Default value: 0.9
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -743,7 +743,7 @@ Default value: 0.999
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -769,7 +769,7 @@ Default value: 1e-07
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -795,7 +795,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -833,7 +833,7 @@ Default value: 0.9
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -859,7 +859,7 @@ Default value: 0.999
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -885,7 +885,7 @@ Default value: 1e-07
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -911,7 +911,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -949,7 +949,7 @@ Default value: 0.9
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -975,7 +975,7 @@ Default value: 0.999
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -1001,7 +1001,7 @@ Default value: 1e-07
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -1027,7 +1027,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -1065,7 +1065,7 @@ Default value: 0.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -1091,7 +1091,7 @@ Default value: False
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>
 
@@ -1120,7 +1120,7 @@ Default value: crossentropy
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>
 
@@ -1141,7 +1141,7 @@ Default value: 0.005
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -1162,7 +1162,7 @@ Default value: 0.0005
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -1183,7 +1183,7 @@ Default value: 470
 
 
 
-Supported hyperparameter specs: values and range
+Supported hyperparameter specs: `values` and `range`
 
 </details>
 
@@ -1204,7 +1204,7 @@ Default value: 1.0
 
 
 
-Supported hyperparameter specs: values and floats
+Supported hyperparameter specs: `values` and `floats`
 
 </details>
 
@@ -1225,7 +1225,7 @@ Default value: 32
 
 
 
-Supported hyperparameter specs: values and range
+Supported hyperparameter specs: `values` and `range`
 
 </details>
 
@@ -1246,6 +1246,6 @@ Default value: False
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>

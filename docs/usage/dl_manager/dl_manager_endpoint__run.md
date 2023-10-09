@@ -20,7 +20,7 @@ _Usually, the outward-facing endpoint retrieves a config from the database, and 
 
 _Generator to use._
 
-Argument type: enum (possible values: `Word2Vec`, `BOWNormalized`, `Metadata`, `OntologyFeatures`, `KateAutoEncoder`, `TfidfGenerator`, `AutoEncoder`, `Bert`, `BOWFrequency`, `Doc2Vec`)
+Argument type: enum (possible values: `Doc2Vec`, `OntologyFeatures`, `Word2Vec`, `KateAutoEncoder`, `BOWFrequency`, `BOWNormalized`, `Bert`, `TfidfGenerator`, `AutoEncoder`, `Metadata`)
 
 Numer of arguments: A list of one or more values.
 
@@ -87,7 +87,21 @@ Default value: .
 
 Additional constraints:
 
-- Constraint on run.ontology-classes, run.apply-ontology-classes and run.classifier: Ontology class file must be given when applying ontology classes or using ontology features
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.apply-ontology-classes, run.classifiers and run.ontology-classes</summary>
+
+
+
+If `run.apply-ontology-classes == True or 'OntologyFeatures' in run.classifiers`, then the following are not allowed:
+
+- `run.ontology-classes == ''`
+
+</details>
+
+
 
 </details>
 
@@ -108,7 +122,21 @@ Default value: False.
 
 Additional constraints:
 
-- Constraint on run.ontology-classes, run.apply-ontology-classes and run.classifier: Ontology class file must be given when applying ontology classes or using ontology features
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.apply-ontology-classes, run.classifiers and run.ontology-classes</summary>
+
+
+
+If `run.apply-ontology-classes == True or 'OntologyFeatures' in run.classifiers`, then the following are not allowed:
+
+- `run.ontology-classes == ''`
+
+</details>
+
+
 
 </details>
 
@@ -119,7 +147,7 @@ Additional constraints:
 
 _Classifier to use. Use `list` for options_
 
-Argument type: enum (possible values: `FullyConnectedModel`, `LinearRNNModel`, `LinearConv1Model`, `Bert`)
+Argument type: enum (possible values: `LinearRNNModel`, `Bert`, `LinearConv1Model`, `FullyConnectedModel`)
 
 Numer of arguments: A list of one or more values.
 
@@ -129,11 +157,21 @@ This argument has no default value.
 
 Additional constraints:
 
-- Constraint on run.classifier and run.input_mode: Argument lists must have equal length.
 
-- Constraint on run.analyze-keywords, run.classifier and #config: Can only analyze keywords when using a convolutional model
 
-- Constraint on run.ontology-classes, run.apply-ontology-classes and run.classifier: Ontology class file must be given when applying ontology classes or using ontology features
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.classifier and run.input_mode</summary>
+
+
+
+The following condition must hold:
+
+`len(run.classifier) == len(run.input_mode)`
+
+</details>
+
+
 
 </details>
 
@@ -211,17 +249,125 @@ Default value: 0.
 
 Additional constraints:
 
-- Constraint on run.store-model and run.k-cross: Cannot store model when using k-fold cross validation
 
-- Constraint on run.cross-project and run.k-cross: Cannot use --k-cross and --cross-project at the same time.
 
-- Constraint on run.k-cross and run.quick-cross: Must specify k when running with --quick-cross
+<details style="margin-left:2em">
 
-- Constraint on run.k-cross and run.cross-project: k-cross must be 0 when running with --cross-project
+<summary style="margin-left:-2em">Constraint on arguments: run.store-model, run.k-cross and run.cross-project</summary>
 
-- Constraint on run.store-model, run.k-cross, run.cross-project and run.quick-cross: Cannot run cross validation (or cross study) scheme when saving a model.
 
-- Constraint on run.k-cross and run.test-with-training-data: Must test with training data when performing cross validation!
+
+The following conditions are mutually exclusive:
+
+- `run.store-model == True`
+
+- `run.k-cross != 0`
+
+- `run.cross-project == True`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.cross-project and run.k-cross</summary>
+
+
+
+The following conditions are mutually exclusive:
+
+- `run.cross-project == True`
+
+- `run.k-cross != 0`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.quick-cross and run.k-cross</summary>
+
+
+
+If `run.quick-cross == True`, then the following are not allowed:
+
+- `run.k-cross == 0`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.analyze-keywords, run.k-cross and run.cross-project</summary>
+
+
+
+If `run.analyze-keywords == True`, then the following are not allowed:
+
+- `run.k-cross != 0`
+
+- `run.cross-project == True`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.k-cross and run.analyze-keywords</summary>
+
+
+
+If `run.k-cross != 0`, then the following are not allowed:
+
+- `run.analyze-keywords == True`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.k-cross and test-with-training-data</summary>
+
+
+
+If `run.k-cross == True`, then the following are not allowed:
+
+- `test-with-training-data == False`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: test-with-training-data and run.k-cross</summary>
+
+
+
+If `test-with-training-data == False`, then the following are not allowed:
+
+- `run.k-cross == True`
+
+</details>
+
+
 
 </details>
 
@@ -242,9 +388,21 @@ Default value: False.
 
 Additional constraints:
 
-- Constraint on run.k-cross and run.quick-cross: Must specify k when running with --quick-cross
 
-- Constraint on run.store-model, run.k-cross, run.cross-project and run.quick-cross: Cannot run cross validation (or cross study) scheme when saving a model.
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.quick-cross and run.k-cross</summary>
+
+
+
+If `run.quick-cross == True`, then the following are not allowed:
+
+- `run.k-cross == 0`
+
+</details>
+
+
 
 </details>
 
@@ -265,11 +423,109 @@ Default value: False.
 
 Additional constraints:
 
-- Constraint on run.cross-project and run.k-cross: Cannot use --k-cross and --cross-project at the same time.
 
-- Constraint on run.k-cross and run.cross-project: k-cross must be 0 when running with --cross-project
 
-- Constraint on run.store-model, run.k-cross, run.cross-project and run.quick-cross: Cannot run cross validation (or cross study) scheme when saving a model.
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.store-model, run.k-cross and run.cross-project</summary>
+
+
+
+The following conditions are mutually exclusive:
+
+- `run.store-model == True`
+
+- `run.k-cross != 0`
+
+- `run.cross-project == True`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.cross-project and run.k-cross</summary>
+
+
+
+The following conditions are mutually exclusive:
+
+- `run.cross-project == True`
+
+- `run.k-cross != 0`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.analyze-keywords, run.k-cross and run.cross-project</summary>
+
+
+
+If `run.analyze-keywords == True`, then the following are not allowed:
+
+- `run.k-cross != 0`
+
+- `run.cross-project == True`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.cross-project and run.analyze-keywords</summary>
+
+
+
+If `run.cross-project == True`, then the following are not allowed:
+
+- `run.analyze-keywords == True`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.cross-project and test-with-training-data</summary>
+
+
+
+If `run.cross-project == True`, then the following are not allowed:
+
+- `test-with-training-data == False`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: test-with-training-data and run.cross-project</summary>
+
+
+
+If `test-with-training-data == False`, then the following are not allowed:
+
+- `run.cross-project == True`
+
+</details>
+
+
 
 </details>
 
@@ -290,7 +546,37 @@ Default value: False.
 
 Additional constraints:
 
-- Constraint on run.store-model and run.cache-features: May not use --cache-features when using --store-model.
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.store-model and run.cache-features</summary>
+
+
+
+If `run.store-model == True`, then the following are not allowed:
+
+- `run.cache-features == True`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.cache-features and run.store-model</summary>
+
+
+
+If `run.cache-features == True`, then the following are not allowed:
+
+- `run.store-model == True`
+
+</details>
+
+
 
 </details>
 
@@ -358,7 +644,7 @@ There are no additional constraints on this argument.
 
 _Upsampler to use_
 
-Argument type: enum (possible values: `SmoteUpSampler`, `SynonymUpSampler`, `RandomUpSampler`)
+Argument type: enum (possible values: `SynonymUpSampler`, `SmoteUpSampler`, `RandomUpSampler`)
 
 Numer of arguments: A single value.
 
@@ -471,7 +757,23 @@ Default value: none.
 
 Additional constraints:
 
-- Constraint on run.ensemble-strategy and run.test-separately: Cannot use ensemble when using separate testing mode.
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.ensemble-strategy and run.test-separately</summary>
+
+
+
+The following conditions are mutually exclusive:
+
+- `run.ensemble-strategy == 'none'`
+
+- `run.test-separately == True`
+
+</details>
+
+
 
 </details>
 
@@ -482,7 +784,7 @@ Additional constraints:
 
 _Classifier to use as meta-classifier in stacking._
 
-Argument type: enum (possible values: `FullyConnectedModel`, `LinearRNNModel`, `LinearConv1Model`, `Bert`)
+Argument type: enum (possible values: `LinearRNNModel`, `Bert`, `LinearConv1Model`, `FullyConnectedModel`)
 
 Numer of arguments: A single value.
 
@@ -631,7 +933,21 @@ Default value: [0.001].
 
 Additional constraints:
 
-- Constraint on run.early-stopping-min-delta and run.early-stopping-attribute: Argument lists must have equal length.
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.early-stopping-min-delta and run.early-stopping-attribute</summary>
+
+
+
+The following condition must hold:
+
+`len(run.early-stopping-min-delta) == len(run.early-stopping-attribute)`
+
+</details>
+
+
 
 </details>
 
@@ -652,7 +968,21 @@ Default value: ['loss'].
 
 Additional constraints:
 
-- Constraint on run.early-stopping-min-delta and run.early-stopping-attribute: Argument lists must have equal length.
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.early-stopping-min-delta and run.early-stopping-attribute</summary>
+
+
+
+The following condition must hold:
+
+`len(run.early-stopping-min-delta) == len(run.early-stopping-attribute)`
+
+</details>
+
+
 
 </details>
 
@@ -673,9 +1003,41 @@ Default value: False.
 
 Additional constraints:
 
-- Constraint on run.ensemble-strategy and run.test-separately: Cannot use ensemble when using separate testing mode.
 
-- Constraint on run.store-model and run.test-separately: Cannot store model when using separate testing mode.
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.ensemble-strategy and run.test-separately</summary>
+
+
+
+The following conditions are mutually exclusive:
+
+- `run.ensemble-strategy == 'none'`
+
+- `run.test-separately == True`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.store-model and run.test-separately</summary>
+
+
+
+The following conditions are mutually exclusive:
+
+- `run.store-model == True`
+
+- `run.test-separately == True`
+
+</details>
+
+
 
 </details>
 
@@ -696,15 +1058,91 @@ Default value: False.
 
 Additional constraints:
 
-- Constraint on run.store-model and run.test-separately: Cannot store model when using separate testing mode.
 
-- Constraint on run.store-model and run.k-cross: Cannot store model when using k-fold cross validation
 
-- Constraint on run.store-model and run.model-id: --model-id must be given when storing a model.
+<details style="margin-left:2em">
 
-- Constraint on run.store-model and run.cache-features: May not use --cache-features when using --store-model.
+<summary style="margin-left:-2em">Constraint on arguments: run.store-model and run.test-separately</summary>
 
-- Constraint on run.store-model, run.k-cross, run.cross-project and run.quick-cross: Cannot run cross validation (or cross study) scheme when saving a model.
+
+
+The following conditions are mutually exclusive:
+
+- `run.store-model == True`
+
+- `run.test-separately == True`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.store-model, run.k-cross and run.cross-project</summary>
+
+
+
+The following conditions are mutually exclusive:
+
+- `run.store-model == True`
+
+- `run.k-cross != 0`
+
+- `run.cross-project == True`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.store-model and run.model-id</summary>
+
+
+
+If `run.store-model == True`, then the following are not allowed:
+
+- `run.model-id == ''`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.store-model and run.cache-features</summary>
+
+
+
+If `run.store-model == True`, then the following are not allowed:
+
+- `run.cache-features == True`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.cache-features and run.store-model</summary>
+
+
+
+If `run.cache-features == True`, then the following are not allowed:
+
+- `run.store-model == True`
+
+</details>
+
+
 
 </details>
 
@@ -725,7 +1163,21 @@ This argument has no default value.
 
 Additional constraints:
 
-- Constraint on run.store-model and run.model-id: --model-id must be given when storing a model.
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.store-model and run.model-id</summary>
+
+
+
+If `run.store-model == True`, then the following are not allowed:
+
+- `run.model-id == ''`
+
+</details>
+
+
 
 </details>
 
@@ -746,9 +1198,87 @@ Default value: False.
 
 Additional constraints:
 
-- Constraint on run.analyze-keywords, run.classifier and #config: Can only analyze keywords when using a convolutional model
 
-- Constraint on run.analyze-keywords and #config: Can not perform cross validation when extracting keywords
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.analyze-keywords and run.classifiers</summary>
+
+
+
+If `run.analyze-keywords == True`, then the following are not allowed:
+
+- `'LinearConv1Model' not in run.classifiers`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.classifiers and run.analyze-keywords</summary>
+
+
+
+If `'LinearConv1Model' not in run.classifiers`, then the following are not allowed:
+
+- `run.analyze-keywords == True`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.analyze-keywords, run.k-cross and run.cross-project</summary>
+
+
+
+If `run.analyze-keywords == True`, then the following are not allowed:
+
+- `run.k-cross != 0`
+
+- `run.cross-project == True`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.k-cross and run.analyze-keywords</summary>
+
+
+
+If `run.k-cross != 0`, then the following are not allowed:
+
+- `run.analyze-keywords == True`
+
+</details>
+
+
+
+
+
+<details style="margin-left:2em">
+
+<summary style="margin-left:-2em">Constraint on arguments: run.cross-project and run.analyze-keywords</summary>
+
+
+
+If `run.cross-project == True`, then the following are not allowed:
+
+- `run.analyze-keywords == True`
+
+</details>
+
+
 
 </details>
 
@@ -826,9 +1356,7 @@ This argument is optional
 
 Default value: False.
 
-Additional constraints:
-
-- Constraint on run.k-cross and run.test-with-training-data: Must test with training data when performing cross validation!
+There are no additional constraints on this argument.
 
 </details>
 

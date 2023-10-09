@@ -19,7 +19,7 @@ Default value: False
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>
 
@@ -40,7 +40,7 @@ Default value: True
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>
 
@@ -61,7 +61,7 @@ Default value: False
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>
 
@@ -82,7 +82,7 @@ This argument has no default value
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>
 
@@ -103,7 +103,7 @@ Default value: False
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>
 
@@ -124,7 +124,7 @@ Default value:
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>
 
@@ -145,7 +145,7 @@ Default value:
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>
 
@@ -166,7 +166,7 @@ Default value:
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>
 
@@ -187,7 +187,7 @@ Default value:
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>
 
@@ -208,7 +208,7 @@ Default value:
 
 
 
-Supported hyperparameter specs: values
+Supported hyperparameter specs: `values`
 
 </details>
 
@@ -229,6 +229,6 @@ This argument has no default value
 
 
 
-Supported hyperparameter specs: values and range
+Supported hyperparameter specs: `values` and `range`
 
 </details>
