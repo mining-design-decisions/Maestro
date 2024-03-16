@@ -1,4 +1,5 @@
 #!/bin/sh
+docker network create maestro_traefik
 docker compose -f docker-compose.yml up --build -d
 docker compose -f ../maestro-issues-db/docker-compose.yml up --build -d
 docker compose -f ../maestro-ArchUI/docker-compose.yml up --build -d
