@@ -8,9 +8,9 @@ services:
       - --api.insecure=true
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
-      - --entrypoints.websecure.address=:443
+      - --entrypoints.websecure.address=:4269
     ports:
-      - "443:443"
+      - "4269:4269"
       - "8080:8080"
     volumes:
       - ./certs:/etc/certs:ro
