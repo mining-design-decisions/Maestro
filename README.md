@@ -17,7 +17,15 @@ The components making up Maestro are divided across five separate repositories:
 The first four components are required to run the actual tool.
 They can be installed by cloning each repo.
 
-This repo contains the setup for Traefik and the SSL certificates. Make sure mkcert is installed and run the shell script `install_certificates.sh` to create the SSL certificates. Afterwards, running `docker compose up --build -d` should start Traefik.
+The Current repo contains the setup for Traefik and the SSL certificates. Make sure mkcert is installed. update the `install_certificates.sh` file with your IP Address. Run the shell script `install_certificates.sh` to create the SSL certificates.
+
+The docker compose requires `maestro_traefik` network. create the maestro_treafik container using the command below
+
+```bash
+docker network create maestro_traefik
+```
+
+please update the IP of the system Afterwards, running `docker compose up --build -d` should start Traefik.
 
 Additionally, the database API needs a secret key used for password hasing,
 which can be generated using `openssl rand -hex 32`.

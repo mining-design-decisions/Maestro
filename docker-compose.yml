@@ -16,8 +16,7 @@ services:
       - ./certs:/etc/certs:ro
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
-      - traefik
-
+      - maestro_traefik
 networks:
-  traefik:
-    driver: bridge
+  maestro_traefik:
+    external: true
